@@ -15,7 +15,7 @@ export const Button = ({
   return (
     <button
       className={clsx(
-        "flex w-full cursor-pointer items-center justify-center rounded-md border-2 border-none font-semibold uppercase transition-all hover:opacity-80",
+        "flex cursor-pointer items-center justify-center rounded-md border-2 border-none font-semibold uppercase transition-all hover:opacity-80",
         {
           "text-black": variant === "primary",
           "text-white": variant === "secondary",

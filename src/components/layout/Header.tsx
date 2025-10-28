@@ -32,7 +32,7 @@ const Header = ({ className }: HeaderProps) => {
           <SectionHeader />
           <Button
             variant="secondary"
-            className="bg-brand-components hidden border-none sm:min-h-[45px] sm:max-w-[190px] xl:flex"
+            className="bg-brand-components hidden w-full border-none sm:min-h-[45px] sm:max-w-[190px] xl:flex"
           >
             Заказать звонок
           </Button>
