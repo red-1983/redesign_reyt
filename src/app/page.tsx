@@ -21,18 +21,18 @@ export default function Home() {
           className="-z-10"
           priority
         />
-        <div className="border-2p-5 absolute top-[25%] left-[10%] flex h-[400px] max-w-[40%] flex-col justify-between">
-          <h2 className="text-[clamp(1.2rem,3.5vw,2.5rem)] font-bold">
+        <div className="xs:min-h-[90%] xs:bottom-[5%] absolute bottom-[0] left-[5%] flex min-h-[95%] max-w-[55%] flex-col justify-between sm:bottom-[10%] sm:min-h-[75%] md:left-[10%] md:min-h-[70%] md:p-5 lg:bottom-[30%] lg:max-w-[700px]">
+          <h2 className="xs:leading-snug text-[clamp(0.95rem,3vw,2.5rem)] leading-tight font-bold">
             Комплексный уход за Вашим авто: от стекол до кондиционера
           </h2>
-          <p className="text-[clamp(1rem,2.5vw,1.4rem)]">
+          <p className="hidden text-[clamp(1rem,2.5vw,1.4rem)] md:block">
             Полный цикл заботы о вашем автомобиле: от треснувшего стекла до
             полутневшей фары. Работаем качественно, оперативно, даем гарантию.
             Вернем прозрачность, яркость и прохладу!
           </p>
           <Button
             variant="secondary"
-            className="bg-brand-components sm:h-[60px] sm:w-[250px]"
+            className="bg-brand-components xs:h-[45px] xs:w-[185px] h-[40px] w-[160px] sm:h-[60px] sm:w-[250px]"
           >
             Оставить заявку
           </Button>
