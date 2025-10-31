@@ -19,11 +19,11 @@ const Header = ({ className }: HeaderProps) => {
         className
       )}
     >
-      <div className="flex w-full max-w-[1292px] items-center justify-between px-8 py-2 md:px-6 md:py-5 xl:px-0">
+      <div className="flex w-full max-w-[1292px] items-center justify-between px-8 md:px-6 md:py-4">
         <Link
           aria-label="logo"
           href="/"
-          className="flex h-[80px] w-[80px] items-center justify-center md:h-[120px] md:w-[120px]"
+          className="flex h-[80px] w-[80px] items-center justify-center md:h-[min-content] md:w-[120px]"
         >
           {" "}
           <Image src={logo} alt="logo" width={120} height={120} />
