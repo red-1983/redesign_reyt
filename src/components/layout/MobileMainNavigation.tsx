@@ -20,7 +20,10 @@ export const MobileMainNavigation = ({
     <div className={className} {...props}>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <IconMenu className="text-brand-components h-15 w-15 cursor-pointer" />
+          <IconMenu
+            className="hover:text-brand-components h-13 w-13 cursor-pointer text-white"
+            strokeWidth={1.5}
+          />
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>

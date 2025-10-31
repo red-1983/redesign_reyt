@@ -6,7 +6,9 @@
   --color-brand-components: #fc3532;
   --color-brand-body: #014bae;
   --color-brand-footer: #001132;
+  --color-brandText: #fff;
   --breakpoint-xs: 375px;
+  --breakpoint-xmd: 425px;
 }
 @layer components {
   .hover-link {
@@ -127,5 +129,8 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h2 {
+    @apply uppercase;
   }
 }
