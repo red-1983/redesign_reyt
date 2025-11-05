@@ -31,8 +31,8 @@ export default function RootLayout({
       >
         <div className="mx-auto grid min-h-screen max-w-[1920px] grid-rows-[min-content_1fr_min-content]">
           <Header className="bg-brand-body mx-auto w-full text-white" />
-          <main className="relative">
-            <MainNavigation className="absolute z-10 w-full" />
+          <main className="text-brandText bg-brand-body relative">
+            <MainNavigation className="absolute z-20 w-full text-black" />
 
             {children}
           </main>
