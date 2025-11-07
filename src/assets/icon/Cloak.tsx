@@ -2,7 +2,7 @@ import React from "react";
 interface CloakProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
 }
-const Cloak = ({ className, ...props }: CloakProps) => {
+export const Cloak = ({ className, ...props }: CloakProps) => {
   return (
     <svg
       width="20"
@@ -17,4 +17,3 @@ const Cloak = ({ className, ...props }: CloakProps) => {
     </svg>
   );
 };
-export default Cloak;

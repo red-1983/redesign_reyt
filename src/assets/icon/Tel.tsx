@@ -2,7 +2,7 @@ import React from "react";
 interface TelProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
 }
-const Tel = ({ className, ...props }: TelProps) => {
+export const Tel = ({ className, ...props }: TelProps) => {
   return (
     <svg
       width="18"
@@ -17,4 +17,3 @@ const Tel = ({ className, ...props }: TelProps) => {
     </svg>
   );
 };
-export default Tel;
