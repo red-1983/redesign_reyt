@@ -2,7 +2,7 @@ import React from "react";
 interface GeoProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
 }
-const Geo = ({ className, ...props }: GeoProps) => {
+export const Geo = ({ className, ...props }: GeoProps) => {
   return (
     <svg
       width="14"
@@ -17,4 +17,3 @@ const Geo = ({ className, ...props }: GeoProps) => {
     </svg>
   );
 };
-export default Geo;

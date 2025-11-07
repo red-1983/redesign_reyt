@@ -1,6 +1,12 @@
-export { default as Geo } from "./icon/Geo";
-export { default as Cloak } from "./icon/Cloak";
-export { default as Tel } from "./icon/Tel";
+export { Car } from "./icon/Car";
+export { CarRepair } from "./icon/CarRepair";
+export { CarSecurity } from "./icon/CarSecurity";
+export { Geo } from "./icon/Geo";
+export { Cloak } from "./icon/Cloak";
+export { Tel } from "./icon/Tel";
+export { List } from "./icon/List";
+export { Quality } from "./icon/Quality";
+export { default as servicesImage1 } from "./img/services/1.webp";
 export { default as servicesImage2 } from "./img/services/2.webp";
 export { default as servicesImage3 } from "./img/services/3.webp";
 export { default as servicesImage4 } from "./img/services/4.webp";

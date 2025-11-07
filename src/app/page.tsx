@@ -1,14 +1,24 @@
 import Image from "next/image";
 import imageSectionNav from "@/assets/img/imageSectionNav.jpg";
 import imageSectionAbout from "@/assets/img/imageSectionAbout.webp";
-import servicesImage1 from "@/assets/img/services/1.webp";
-import { servicesImage2, servicesImage3, servicesImage4 } from "@/assets";
+import {
+  servicesImage1,
+  servicesImage2,
+  servicesImage3,
+  servicesImage4,
+  Car,
+  CarRepair,
+  CarSecurity,
+  List,
+  Quality,
+} from "@/assets";
 import { Card } from "@/components/ui/card/Card";
-import { Button } from "@/components/ui";
+import { Button, IconCard } from "@/components/ui";
+
 export default function Home() {
   return (
     <>
-      <section className="relative mb-5 flex aspect-[1920/820] pb-2 lg:flex-col lg:justify-center">
+      <section className="relative flex aspect-[1920/820] md:mb-30 lg:flex-col lg:justify-center">
         <h1 className="sr-only">
           {" "}
           Aвтостекла Мозырь, замена автостекол, установка автостекол, ремонт
@@ -46,7 +56,7 @@ export default function Home() {
         </div>
       </section>
       <div className="mx-auto max-w-[1350px] px-4">
-        <section className="flex h-[min-content] w-full flex-col items-center justify-center md:mb-15">
+        <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0 md:mb-30">
           <Button
             variant="secondary"
             className="bg-brand-components flex h-[45px] w-[250px] sm:hidden"
@@ -54,7 +64,7 @@ export default function Home() {
             Оставить заявку
           </Button>
           <div className="flex h-[min-content] flex-col items-center justify-between">
-            <h2 className="mt-15 mb-7 self-start">О компании</h2>
+            <h2 className="self-start">О компании</h2>
             <div className="flex h-[min-content] w-full items-center justify-between gap-[1%]">
               <p className="w-full text-justify text-[clamp(1rem,2.5vw,1.5rem)] sm:w-[50%]">
                 Наша команда - эксперты с многолетним опытом, для которых
@@ -80,8 +90,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="bg-brand-body pt-15 md:mb-15">
-          <h2 className="mb-7">Каталог услуг</h2>
+        <section className="bg-brand-body mb-30 pt-0.5">
+          <h2 className="">Каталог услуг</h2>
           <ul className="flex flex-wrap justify-center gap-5 sm:justify-around">
             <Card
               image={servicesImage1}
@@ -98,18 +108,54 @@ export default function Home() {
             <Card
               image={servicesImage3}
               altImage="Изображение-замена автомобильных стекол"
-              h3="Замена автомобильных стекол"
+              h3="Ремонт сколов и трещин"
               href="/services/glass-replacement"
             />
             <Card
               image={servicesImage4}
               altImage="Изображение-замена автомобильных стекол"
-              h3="Замена автомобильных стекол"
+              h3="Заправка кондиционера автомобиля"
               href="/services/glass-replacement"
             />
           </ul>
         </section>
       </div>
+      <section className="bg-brand-footer flex flex-col items-center pb-30">
+        <h2 className="text-center">Почему клиенты выбирают нас?</h2>
+        <ul className="flex w-[1350px] flex-wrap justify-between gap-5">
+          <IconCard title="20 лет решаем задачи наших клиентов ">
+            <Car className="h-38 w-38 fill-white transition-all duration-300 ease-in-out group-hover:fill-[yellow] group-hover:drop-shadow-[0_5px_15px_rgba(255,255,0,0.4)]" />
+          </IconCard>
+          <IconCard
+            title="Сотрудничаем 
+с самыми 
+надежными производителями
+автостекол"
+          >
+            <List className="h-38 w-38 fill-white text-green-500 group-hover:[&>.list-item-1]:fill-current group-hover:[&>.list-item-2]:fill-current group-hover:[&>.list-item-2]:delay-100 group-hover:[&>.list-item-3]:fill-current group-hover:[&>.list-item-3]:delay-300 group-hover:[&>.list-item-4]:fill-current group-hover:[&>.list-item-4]:delay-500 [&>g]:transition-all [&>g]:duration-200" />
+          </IconCard>
+          <IconCard
+            title="Работаем 
+со страховыми 
+случаями"
+          >
+            <CarSecurity className="h-38 w-38" />
+          </IconCard>
+          <IconCard title="Выездной сервис">
+            <CarRepair className="h-38 w-38" />
+          </IconCard>
+          <IconCard
+            title="Гарантия на 
+герметичность 
+стекла: 
+12 месяцев - 
+для автомобилей
+ до 2018"
+          >
+            <Quality className="h-38 w-38" />
+          </IconCard>
+        </ul>
+      </section>
     </>
   );
 }

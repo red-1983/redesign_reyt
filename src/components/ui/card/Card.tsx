@@ -23,7 +23,7 @@ export const Card = ({
     <li
       className={clsx(
         `${className} group`,
-        "flex h-[325px] w-[310px] cursor-pointer flex-col items-center justify-between",
+        "mb-15 flex h-[310px] w-[310px] cursor-pointer flex-col items-center justify-between sm:h-[325px]",
         className
       )}
       {...props}
