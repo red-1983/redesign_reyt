@@ -122,7 +122,7 @@ export default function Home() {
       </div>
       <section className="bg-brand-footer flex flex-col items-center pb-30">
         <h2 className="text-center">Почему клиенты выбирают нас?</h2>
-        <ul className="flex w-[1350px] flex-wrap justify-between gap-5">
+        <ul className="flex w-full max-w-[1350px] flex-wrap justify-between gap-5">
           <IconCard title="20 лет решаем задачи наших клиентов ">
             <Car className="h-38 w-38 fill-white transition-all duration-300 ease-in-out group-hover:fill-[yellow] group-hover:drop-shadow-[0_5px_15px_rgba(255,255,0,0.4)]" />
           </IconCard>
@@ -132,17 +132,17 @@ export default function Home() {
 надежными производителями
 автостекол"
           >
-            <List className="h-38 w-38 fill-white text-green-500 group-hover:[&>.list-item-1]:fill-current group-hover:[&>.list-item-2]:fill-current group-hover:[&>.list-item-2]:delay-100 group-hover:[&>.list-item-3]:fill-current group-hover:[&>.list-item-3]:delay-300 group-hover:[&>.list-item-4]:fill-current group-hover:[&>.list-item-4]:delay-500 [&>g]:transition-all [&>g]:duration-200" />
+            <List className="h-30 w-30 fill-white text-green-500 group-hover:[&>.list-item-1]:fill-current group-hover:[&>.list-item-2]:fill-current group-hover:[&>.list-item-2]:delay-100 group-hover:[&>.list-item-3]:fill-current group-hover:[&>.list-item-3]:delay-300 group-hover:[&>.list-item-4]:fill-current group-hover:[&>.list-item-4]:delay-500 [&>g]:transition-all [&>g]:duration-200" />
           </IconCard>
           <IconCard
             title="Работаем 
 со страховыми 
 случаями"
           >
-            <CarSecurity className="h-38 w-38" />
+            <CarSecurity className="h-30 w-30 group-hover:[&>.check]:fill-[green] [&>.shield]:fill-none" />
           </IconCard>
           <IconCard title="Выездной сервис">
-            <CarRepair className="h-38 w-38" />
+            <CarRepair className="h-30 w-30" />
           </IconCard>
           <IconCard
             title="Гарантия на 
@@ -152,7 +152,7 @@ export default function Home() {
 для автомобилей
  до 2018"
           >
-            <Quality className="h-38 w-38" />
+            <Quality className="h-30 w-30" />
           </IconCard>
         </ul>
       </section>
