@@ -13,8 +13,7 @@ import {
   Quality,
 } from "@/assets";
 import { Card } from "@/components/ui/card/Card";
-import { Button, IconCard } from "@/components/ui";
-
+import { Button, IconCard, CarouselImage } from "@/components/ui";
 export default function Home() {
   return (
     <>
@@ -120,9 +119,9 @@ export default function Home() {
           </ul>
         </section>
       </div>
-      <section className="bg-brand-footer flex flex-col items-center pb-30">
+      <section className="bg-brand-footer xs:px-0 flex flex-col items-center px-2 pb-30">
         <h2 className="text-center">Почему клиенты выбирают нас?</h2>
-        <ul className="flex w-full max-w-[1350px] flex-wrap justify-between gap-5">
+        <ul className="xs:flex-row xs:gap-5 flex w-full max-w-[1350px] flex-col flex-wrap items-center justify-center gap-10 md:justify-around 2xl:justify-between">
           <IconCard title="20 лет решаем задачи наших клиентов ">
             <Car className="h-38 w-38 fill-white transition-all duration-300 ease-in-out group-hover:fill-[yellow] group-hover:drop-shadow-[0_5px_15px_rgba(255,255,0,0.4)]" />
           </IconCard>
@@ -155,6 +154,10 @@ export default function Home() {
             <Quality className="h-30 w-30" />
           </IconCard>
         </ul>
+      </section>
+      <section className="mx-auto flex w-full max-w-[1350px] flex-col items-center">
+        <h2 className="self-start">Портфолио</h2>
+        <CarouselImage />
       </section>
     </>
   );

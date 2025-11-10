@@ -10,3 +10,4 @@ export { default as servicesImage1 } from "./img/services/1.webp";
 export { default as servicesImage2 } from "./img/services/2.webp";
 export { default as servicesImage3 } from "./img/services/3.webp";
 export { default as servicesImage4 } from "./img/services/4.webp";
+export { default as carouselImage1 } from "./img/carousel/carouselImage1.webp";
