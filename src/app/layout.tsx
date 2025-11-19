@@ -3,7 +3,7 @@ import { Roboto, Roboto_Mono } from "next/font/google";
 import Header from "@/components/layout/Header";
 import "./globals.css";
 import { MainNavigation } from "@/components/layout/MainNavigation";
-
+import { Footer } from "@/components";
 const RobotoSans = Roboto({
   variable: "--font-roboto-sans",
   subsets: ["latin"],
@@ -36,7 +36,7 @@ export default function RootLayout({
 
             {children}
           </main>
-          <footer>footer</footer>
+          <Footer />
         </div>
       </body>
     </html>

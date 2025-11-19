@@ -3,3 +3,8 @@ export { MobileNav } from "./mobileNav/MobileNav";
 export { IconMenu } from "./iconLucide/IconMenu";
 export { IconCard } from "./iconCard/IconCard";
 export { CarouselImage } from "./carousel/CarouselImage";
+export { FormaForConsuoltation } from "./formaForConsuoltation/FormaForConsuoltation";
+export { CaruselReviews } from "./caruselReviews/CaruselReviews";
+export { YandexMaps } from "./yandexMaps/YandexMaps";
+export { BlockContact } from "./blockContact/BlockContact";
+export { BlockWorkTime } from "./blockWorkTime/BlockWorkTime";

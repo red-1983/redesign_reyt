@@ -6,6 +6,7 @@ import {
   servicesImage2,
   servicesImage3,
   servicesImage4,
+  imgForm,
   Car,
   CarRepair,
   CarSecurity,
@@ -13,7 +14,13 @@ import {
   Quality,
 } from "@/assets";
 import { Card } from "@/components/ui/card/Card";
-import { Button, IconCard, CarouselImage } from "@/components/ui";
+import {
+  Button,
+  IconCard,
+  CarouselImage,
+  FormaForConsuoltation,
+  CaruselReviews,
+} from "@/components/ui";
 export default function Home() {
   return (
     <>
@@ -155,9 +162,41 @@ export default function Home() {
           </IconCard>
         </ul>
       </section>
-      <section className="mx-auto flex w-full max-w-[1350px] flex-col items-center">
+      <section className="mx-auto flex w-full max-w-[1350px] flex-col items-center gap-10 px-4 pb-5 md:gap-15 md:pb-30">
         <h2 className="self-start">Портфолио</h2>
-        <CarouselImage />
+        <CarouselImage className="max-w-[75%] md:max-w-[60%]" />
+        <Button
+          variant="secondary"
+          className="bg-brand-components h-[50px] w-[300px]"
+        >
+          {" "}
+          Подробнее
+        </Button>
+      </section>
+      <section className="bg-brand-footer mx-auto w-full px-4 pt-15 pb-10 md:pt-30 md:pb-15 2xl:px-0">
+        <div className="mx-auto flex h-[min-content] w-full max-w-[1350px] flex-col items-center gap-5 md:flex-row">
+          <div className="relative aspect-[740px/416px] h-auto max-w-[500px] min-w-[300px] md:max-w-[740px]">
+            <Image src={imgForm} alt="imageSectionNav" />
+          </div>
+          <div className="flex w-full max-w-[520px] flex-col gap-4">
+            <p className="flex flex-col gap-5">
+              <span className="text-[clamp(1.1rem,2.5vw,1.8rem)] tracking-wider uppercase">
+                Оставить заявку, чтобы получить бесплатную консультацию
+              </span>{" "}
+              <span>
+                Наш менеджер свяжется с вами, чтобы обсудить все детали и
+                предложит оптимальное решение для вашего автомобиля
+              </span>
+            </p>
+            <FormaForConsuoltation />
+          </div>
+        </div>
+      </section>
+      <section className="bg-brand-body flex w-full justify-center pb-15 md:pb-30">
+        <div className="max-w-[1350px] px-4 xl:px-0">
+          <h2 className="md:30 mb-20">отзывы наших клиентов</h2>{" "}
+          <CaruselReviews />
+        </div>
       </section>
     </>
   );

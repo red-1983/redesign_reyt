@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 interface CardProps {
   className?: string;
@@ -21,7 +21,7 @@ export const Card = ({
 }: CardProps) => {
   return (
     <li
-      className={clsx(
+      className={cn(
         `${className} group`,
         "mb-15 flex h-[310px] w-[310px] cursor-pointer flex-col items-center justify-between sm:h-[325px]",
         className
