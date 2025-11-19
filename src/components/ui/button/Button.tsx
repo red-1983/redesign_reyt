@@ -1,5 +1,5 @@
 import React from "react";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -14,7 +14,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={clsx(
+      className={cn(
         "cursor-pointer items-center justify-center rounded-md border-2 border-none font-semibold uppercase transition-all hover:opacity-80",
         {
           "text-black": variant === "primary",

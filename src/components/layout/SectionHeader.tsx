@@ -1,7 +1,8 @@
 import React from "react";
-import { Geo, Cloak, Tel } from "@/assets";
+import { Geo, Tel } from "@/assets";
 import clsx from "clsx";
 import Link from "next/link";
+import { BlockWorkTime } from "../ui";
 interface SectionHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React.ReactNode;
@@ -26,14 +27,7 @@ export const SectionHeader = ({
         <Geo className="fill-[#FC3532]" />
         <span>г. Мозырь, 1-ый пер. Малинина, 6Б</span>
       </Link>
-      <ul className="hidden w-[max-content] flex-col gap-1.5 lg:flex">
-        <li className="relative flex items-center">
-          <Cloak className="absolute left-[-25px] fill-[#FC3532]" />
-          <span>Вт - Пт: 8:00 - 17:00</span>
-        </li>
-        <li>Cб: 8:00 - 16:00</li>
-        <li>Вс-Пн: Выходной</li>
-      </ul>
+      <BlockWorkTime className="hidden" />
       <ul className="hidden w-[max-content] flex-col gap-1.5 md:flex">
         <li>
           <Link
