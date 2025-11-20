@@ -16,9 +16,8 @@ export const Copyright = ({ className, ...props }: CopyrightProps) => {
     >
       <p>Разработано в веб-студии</p>
       <Link href="https://www.skillnet.by/" target="_blank" rel="noreferrer">
-        <Logo className="w-[100px] fill-white [&_.logo-bg]:fill-transparent [&_.net]:fill-[#009FE3]" />
+        <Logo className="w-[90px] fill-white [&_.logo-bg]:fill-transparent [&_.net]:fill-[#009FE3]" />
       </Link>
-
       <p>&copy; 2025. Все права защищены.</p>
     </div>
   );
