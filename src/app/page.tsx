@@ -192,7 +192,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-brand-body flex w-full justify-center pb-15 md:pb-30">
+      <section className="bg-brand-body flex w-full justify-center pb-20 md:pb-30">
         <div className="max-w-[1350px] px-4 xl:px-0">
           <h2 className="md:30 mb-20">отзывы наших клиентов</h2>{" "}
           <CaruselReviews />

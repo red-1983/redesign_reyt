@@ -30,7 +30,7 @@ export const BlockContact = ({ className, ...props }: BlockContactProps) => {
         >
           <Tel className="fill-brand-components" />{" "}
           <span>Телефон: +375 33 650 86 32</span>{" "}
-          <span>Выездной специалист</span>
+          <span>выездной специалист</span>
         </Link>
       </li>
       <li className="hover:text-brand-components transition-all duration-500">

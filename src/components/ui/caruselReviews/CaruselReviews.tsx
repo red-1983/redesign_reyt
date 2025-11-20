@@ -59,7 +59,7 @@ export const CaruselReviews = () => {
       }}
       className=""
     >
-      <CarouselContent className={isMobile ? "h-[500px]" : "f-wull max-w-svw"}>
+      <CarouselContent className={isMobile ? "h-[400px]" : "f-wull max-w-svw"}>
         {reviews.map((item) => (
           <CarouselItem
             key={item.id}
