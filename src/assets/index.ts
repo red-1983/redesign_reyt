@@ -7,6 +7,7 @@ export { Tel } from "./icon/Tel";
 export { List } from "./icon/List";
 export { Quality } from "./icon/Quality";
 export { IconInstagram } from "./icon/IconInstagram";
+export { Logo } from "./icon/Logo";
 export { default as servicesImage1 } from "./img/services/1.webp";
 export { default as servicesImage2 } from "./img/services/2.webp";
 export { default as servicesImage3 } from "./img/services/3.webp";

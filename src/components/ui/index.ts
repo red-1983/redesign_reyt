@@ -8,3 +8,4 @@ export { CaruselReviews } from "./caruselReviews/CaruselReviews";
 export { YandexMaps } from "./yandexMaps/YandexMaps";
 export { BlockContact } from "./blockContact/BlockContact";
 export { BlockWorkTime } from "./blockWorkTime/BlockWorkTime";
+export { Copyright } from "./copyright/Copyright";
