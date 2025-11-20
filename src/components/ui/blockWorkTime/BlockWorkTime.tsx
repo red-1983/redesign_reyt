@@ -7,7 +7,7 @@ interface BlockWorkTimeProps extends React.ComponentProps<"ul"> {
 export const BlockWorkTime = ({ className, ...props }: BlockWorkTimeProps) => {
   return (
     <ul
-      className={cn("w-[max-content] flex-col gap-1.5 lg:flex", className)}
+      className={cn("flex w-[max-content] flex-col gap-1.5", className)}
       {...props}
     >
       <li className="flex items-center gap-2">

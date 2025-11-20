@@ -1,22 +1,27 @@
 import React from "react";
-import { YandexMaps, BlockContact, BlockWorkTime } from "@/components/ui";
+import {
+  YandexMaps,
+  BlockContact,
+  BlockWorkTime,
+  Copyright,
+} from "@/components/ui";
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-footer flex w-full justify-center py-15 text-white lg:px-10">
-      <div className="flex w-full max-w-[1350px] flex-col-reverse items-center gap-10 lg:flex-row lg:justify-between">
-        <div className="max-w-[450px] pt-15 text-[clamp(0.9rem,2.5vw,1.1rem)]">
-          <div className="mb-4 flex flex-col justify-between gap-4">
+    <footer className="bg-brand-footer flex w-full flex-col items-center pt-15 pb-5 text-white lg:px-10 2xl:px-0">
+      <div className="mb-20 flex w-full max-w-[1350px] flex-col-reverse items-center justify-around gap-15 lg:flex-row lg:gap-10 2xl:justify-between">
+        <div className="flex flex-col gap-10 text-[clamp(0.9rem,2.5vw,1.1rem)] sm:flex-row lg:flex-col">
+          <div className="mb-4 flex w-[250px] flex-col items-center justify-between gap-4 sm:w-full sm:items-start">
             <h3 className="text-[clamp(1rem,2.5vw,1.4rem)] uppercase">
               Контакты
             </h3>
-            <p>
+            <p className="self-start">
               ИП Реут Дмитрий Викторович <br />
               УНП 491185350
             </p>
-            <BlockContact className="flex flex-col gap-3 transition-all duration-500" />
+            <BlockContact className="flex flex-col gap-3 sm:items-start md:w-full" />
           </div>
-          <div className="flex flex-col justify-between gap-4">
+          <div className="flex flex-col items-center justify-start gap-4 sm:items-start lg:justify-between">
             <h3 className="text-[clamp(1rem,2.5vw,1.4rem)] uppercase">
               Время работы
             </h3>
@@ -24,10 +29,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="aspect-[600/500] h-auto w-full max-w-[50%]">
+        <div className="xmd:max-w-[60%] aspect-[600/500] h-auto w-full max-w-[80%] md:max-w-[45%]">
           <YandexMaps />
         </div>
       </div>
+      <Copyright />
     </footer>
   );
 };
