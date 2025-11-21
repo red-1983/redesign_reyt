@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { carouselImage1, carouselImage2, carouselImage3 } from "@/assets";
@@ -15,6 +16,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useMediaQuery } from "@/hooks/use-media-query";
 export const CarouselImage = ({
   children,
   className,
@@ -37,6 +39,7 @@ export const CarouselImage = ({
       alt: "Пример работы 3",
     },
   ];
+  const isMobile = useMediaQuery("(max-width: 640px)");
   return (
     <Carousel className={cn("w-full", className)} {...props}>
       <CarouselContent>
@@ -46,8 +49,17 @@ export const CarouselImage = ({
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      {isMobile ? (
+        <div className="absolute top-[-40px] right-[20px] flex gap-x-10">
+          <CarouselPrevious className="relative top-auto right-auto bottom-auto left-auto" />
+          <CarouselNext className="relative top-auto right-auto bottom-auto left-auto" />
+        </div>
+      ) : (
+        <>
+          <CarouselPrevious />
+          <CarouselNext />
+        </>
+      )}
     </Carousel>
   );
 };
