@@ -8,6 +8,7 @@ export const Logo = ({ className, ...props }: LogoProps) => {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 136 50"
+      fill="currentColor"
       className={className}
       {...props}
     >

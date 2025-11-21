@@ -34,7 +34,7 @@ export const IconCard = ({
       {...props}
     >
       {iconWithProps}
-      <p className="w-full text-center text-[clamp(0.9rem,1.5vw,1.2rem)]">
+      <p className="w-full text-center text-[clamp(1.2rem,1.5vw,1.6rem)]">
         {title}
       </p>
     </li>
