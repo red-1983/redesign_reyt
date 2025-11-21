@@ -128,9 +128,9 @@ export default function Home() {
       </div>
       <section className="bg-brand-footer xs:px-0 flex flex-col items-center px-2 pb-30">
         <h2 className="text-center">Почему клиенты выбирают нас?</h2>
-        <ul className="xs:flex-row xs:gap-5 flex w-full max-w-[1350px] flex-col flex-wrap items-center justify-center gap-10 md:justify-around 2xl:justify-between">
+        <ul className="xs:flex-row xs:gap-5 xs:items-start flex w-full max-w-[1350px] flex-col flex-wrap items-center justify-center gap-10 md:justify-around 2xl:justify-between">
           <IconCard title="20 лет решаем задачи наших клиентов ">
-            <Car className="h-38 w-38 fill-white transition-all duration-300 ease-in-out group-hover:fill-[yellow] group-hover:drop-shadow-[0_5px_15px_rgba(255,255,0,0.4)]" />
+            <Car className="group-hover:fill-brand-components group-active:fill-brand-components h-38 w-38 fill-white transition-all duration-300 ease-in-out group-hover:drop-shadow-[0_5px_15px_rgba(255,255,0,0.4)]" />
           </IconCard>
           <IconCard
             title="Сотрудничаем 
@@ -138,14 +138,14 @@ export default function Home() {
 надежными производителями
 автостекол"
           >
-            <List className="h-30 w-30 fill-white text-green-500 group-hover:[&>.list-item-1]:fill-current group-hover:[&>.list-item-2]:fill-current group-hover:[&>.list-item-2]:delay-100 group-hover:[&>.list-item-3]:fill-current group-hover:[&>.list-item-3]:delay-300 group-hover:[&>.list-item-4]:fill-current group-hover:[&>.list-item-4]:delay-500 [&>g]:transition-all [&>g]:duration-200" />
+            <List className="text-brand-components h-30 w-30 fill-white group-hover:[&>.list-item-1]:fill-current group-active:[&>.list-item-1]:fill-current group-hover:[&>.list-item-2]:fill-current group-hover:[&>.list-item-2]:delay-100 group-active:[&>.list-item-2]:fill-current group-active:[&>.list-item-2]:delay-100 group-hover:[&>.list-item-3]:fill-current group-hover:[&>.list-item-3]:delay-300 group-active:[&>.list-item-3]:fill-current group-active:[&>.list-item-3]:delay-300 group-hover:[&>.list-item-4]:fill-current group-hover:[&>.list-item-4]:delay-500 group-active:[&>.list-item-4]:fill-current group-active:[&>.list-item-4]:delay-500 [&>g]:transition-all [&>g]:duration-200" />
           </IconCard>
           <IconCard
             title="Работаем 
 со страховыми 
 случаями"
           >
-            <CarSecurity className="h-30 w-30 group-hover:[&>.check]:fill-[green] [&>.shield]:fill-none" />
+            <CarSecurity className="group-hover:[&>.check]:fill-brand-components group-active:[&>.check]:fill-brand-components group-hover:[&>.shield]:stroke-brand-components group-active:[&>.shield]:stroke-brand-components h-30 w-30 [&>.shield]:origin-center [&>.shield]:fill-none [&>.shield]:stroke-white [&>.shield]:transition-transform [&>.shield]:duration-500 group-hover:[&>.shield]:rotate-y-[360deg]" />
           </IconCard>
           <IconCard title="Выездной сервис">
             <CarRepair className="h-30 w-30" />
