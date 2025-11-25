@@ -44,7 +44,7 @@ export const CarouselImage = ({
     <Carousel className={cn("w-full", className)} {...props}>
       <CarouselContent>
         {arryImage.map((item) => (
-          <CarouselItem key={item.id} className="relative aspect-[1310/873]">
+          <CarouselItem key={item.id} className="relative aspect-[1310/874]">
             <Image src={item.image} alt={item.alt} fill sizes="100vw" />
           </CarouselItem>
         ))}

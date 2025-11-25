@@ -1,22 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
-import { Button } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
-interface CardProps {
+interface CardProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string;
   h3?: string;
   image?: string | StaticImageData;
   altImage?: string;
-  href?: string;
+  children?: React.ReactNode;
 }
 export const Card = ({
   className,
   h3,
   image,
   altImage,
-  href = "#",
+  children,
   ...props
 }: CardProps) => {
   return (
@@ -30,23 +29,18 @@ export const Card = ({
     >
       <div className="flex w-full flex-col items-center gap-2">
         {" "}
-        <Link href={href} className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden">
           {image && altImage && (
             <Image
               src={image}
               alt={altImage}
-              className="min-h-[200px] w-[300px] transition-transform duration-300 ease-in-out group-hover:scale-110"
+              className="min-h-[200px] w-[300px] transition-transform duration-300 ease-in-out group-hover:scale-110 group-active:scale-110"
             />
           )}
-        </Link>
+        </div>
         {h3 && <h3 className="text-center">{h3}</h3>}
       </div>
-      <Button
-        variant="secondary"
-        className="bg-brand-components h-[50px] w-[300px]"
-      >
-        Подробнее
-      </Button>
+      {children}
     </li>
   );
 };

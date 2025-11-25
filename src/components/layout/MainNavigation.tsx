@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
   NavigationMenu,
@@ -37,6 +38,7 @@ function ListItem({
 }
 type MainNavigationProps = React.HTMLAttributes<HTMLElement>;
 export function MainNavigation({ className, ...props }: MainNavigationProps) {
+  const pathname = usePathname();
   return (
     <div className={className} {...props}>
       <NavigationMenu className="mx-auto hidden max-w-[1292px] md:flex">
@@ -48,14 +50,22 @@ export function MainNavigation({ className, ...props }: MainNavigationProps) {
             >
               <Link
                 href="/"
-                className="hover:text-brand-components bg-transparent hover:bg-transparent"
+                className={cn(
+                  "hover:text-brand-components bg-transparent hover:bg-transparent",
+                  pathname === "/" && "text-brand-components"
+                )}
               >
                 Главная
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="hover:text-brand-components data-[state=open]:hover:text-brand-components cursor-pointer bg-transparent hover:bg-transparent">
+            <NavigationMenuTrigger
+              className={cn(
+                "hover:text-brand-components data-[state=open]:hover:text-brand-components cursor-pointer bg-transparent hover:bg-transparent",
+                pathname.startsWith("/services") && "text-brand-components"
+              )}
+            >
               Услуги
             </NavigationMenuTrigger>
             <NavigationMenuContent asChild>
@@ -80,7 +90,10 @@ export function MainNavigation({ className, ...props }: MainNavigationProps) {
             >
               <Link
                 href="/portfolio"
-                className="hover:text-brand-components bg-transparent hover:bg-transparent"
+                className={cn(
+                  "hover:text-brand-components bg-transparent hover:bg-transparent",
+                  pathname === "/portfolio" && "text-brand-components"
+                )}
               >
                 Портфолио
               </Link>
@@ -93,7 +106,10 @@ export function MainNavigation({ className, ...props }: MainNavigationProps) {
             >
               <Link
                 href="/contacts"
-                className="hover:text-brand-components bg-transparent hover:bg-transparent"
+                className={cn(
+                  "hover:text-brand-components bg-transparent hover:bg-transparent",
+                  pathname === "/contacts" && "text-brand-components"
+                )}
               >
                 Контакты
               </Link>

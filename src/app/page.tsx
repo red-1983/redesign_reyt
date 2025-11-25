@@ -16,56 +16,43 @@ import {
 import { Card } from "@/components/ui/card/Card";
 import {
   Button,
+  LinkService,
   IconCard,
   CarouselImage,
   FormaForConsuoltation,
   CaruselReviews,
+  SectionMain,
 } from "@/components/ui";
 export default function Home() {
   return (
     <>
-      <section className="relative flex aspect-[1920/820] md:mb-30 lg:flex-col lg:justify-center">
-        <h1 className="sr-only">
-          {" "}
-          Aвтостекла Мозырь, замена автостекол, установка автостекол, ремонт
-          трещин автостекла, полировка фар, заправка автокондиционера - reyt.by
-        </h1>
-        <Image
-          src={imageSectionNav}
-          alt="Фоновое изображение навигационной секции"
-          fill
-          sizes="100vw"
-          quality={100}
-          style={{ objectFit: "cover" }}
-          placeholder="blur"
-          className="z-10"
-          priority
-        />
-        <div className="xmd:flex-col xs:justify-end xmd:justify-start xs:px-10 z-10 flex px-2 pt-6 sm:justify-around md:w-[70%] lg:h-[600px]">
-          <p className="xs:leading-snug text-[clamp(1rem,3.3vw,2.5rem)] leading-[1.5rem] font-bold tracking-wide text-[#000000c7] lowercase first-letter:uppercase">
-            Комплексный уход <br className="md:hidden" />
-            за Вашим авто: <br />
-            от стекол <br className="md:hidden" />
-            до кондиционера
-          </p>
-          <p className="hidden text-[clamp(1rem,2.5vw,1.4rem)] lg:block lg:w-[500px]">
-            Полный цикл заботы о вашем автомобиле: от треснувшего стекла до
+      <SectionMain
+        h1="Aвтостекла Мозырь, замена автостекол, установка автостекол, ремонт
+          трещин автостекла, полировка фар, заправка автокондиционера - reyt.by"
+        imageSRC={imageSectionNav}
+        imageALT="Фоновое изображение навигационной секции"
+        mainText={
+          <>
+            Комплексный уход за Вашим авто: <br /> от стекол до кондиционера
+          </>
+        }
+        text="Полный цикл заботы о вашем автомобиле:  от треснувшего стекла до
             полутневшей фары. Работаем качественно, оперативно, даем гарантию.
-            Вернем прозрачность, яркость и прохладу!
-          </p>
-          <Button
-            variant="secondary"
-            className="bg-brand-components xs:h-[45px] xs:w-[185px] hidden h-[40px] w-[160px] sm:flex sm:h-[60px] sm:w-[250px]"
-          >
-            Оставить заявку
-          </Button>
-        </div>
-      </section>
+            Вернем прозрачность, яркость и прохладу!"
+      >
+        <Button
+          variant="secondary"
+          className="bg-brand-components hidden h-[50px] w-[300px] sm:flex"
+        >
+          Оставить заявку
+        </Button>
+      </SectionMain>
+
       <div className="mx-auto max-w-[1350px] px-4">
         <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0 md:mb-30">
           <Button
             variant="secondary"
-            className="bg-brand-components flex h-[45px] w-[250px] sm:hidden"
+            className="bg-brand-components flex h-[50px] w-[300px] sm:hidden"
           >
             Оставить заявку
           </Button>
@@ -96,33 +83,45 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="bg-brand-body mb-30 pt-0.5">
+        <section className="bg-brand-body mb-15 pt-0.5 md:mb-30">
           <h2 className="">Каталог услуг</h2>
           <ul className="flex flex-wrap justify-center gap-5 sm:justify-around">
             <Card
               image={servicesImage1}
               altImage="Изображение-замена автомобильных стекол"
               h3="Замена автомобильных стекол"
-              href="/services/glass-replacement"
-            />
+            >
+              <LinkService href="/services/glass-replacement">
+                Подробнее
+              </LinkService>
+            </Card>
             <Card
               image={servicesImage2}
               altImage="Изображение-полировка фар"
               h3="Полировка фар"
-              href="/services/glass-replacement"
-            />
+            >
+              <LinkService href="/services/glass-replacement">
+                Подробнее
+              </LinkService>
+            </Card>
             <Card
               image={servicesImage3}
               altImage="Изображение-замена автомобильных стекол"
               h3="Ремонт сколов и трещин"
-              href="/services/glass-replacement"
-            />
+            >
+              <LinkService href="/services/glass-replacement">
+                Подробнее
+              </LinkService>
+            </Card>
             <Card
               image={servicesImage4}
               altImage="Изображение-замена автомобильных стекол"
               h3="Заправка кондиционера автомобиля"
-              href="/services/glass-replacement"
-            />
+            >
+              <LinkService href="/services/glass-replacement">
+                Подробнее
+              </LinkService>
+            </Card>
           </ul>
         </section>
       </div>
@@ -164,14 +163,8 @@ export default function Home() {
       </section>
       <section className="mx-auto flex w-full max-w-[1350px] flex-col items-center gap-10 px-4 pb-5 md:gap-15 md:pb-30">
         <h2 className="self-start">Портфолио</h2>
-        <CarouselImage className="max-w-[75%] md:max-w-[60%]" />
-        <Button
-          variant="secondary"
-          className="bg-brand-components h-[50px] w-[300px]"
-        >
-          {" "}
-          Подробнее
-        </Button>
+        <CarouselImage className="xmd:max-w-[80%] max-w-[95%] md:max-w-[60%]" />
+        <LinkService href="/portfolio">Подробнее</LinkService>
       </section>
       <section className="bg-brand-footer mx-auto w-full px-4 pt-15 pb-10 md:pt-30 md:pb-15 2xl:px-0">
         <div className="mx-auto flex h-[min-content] w-full max-w-[1350px] flex-col items-center gap-5 md:flex-row">
