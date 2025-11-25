@@ -19,7 +19,7 @@ const Header = ({ className }: HeaderProps) => {
         className
       )}
     >
-      <div className="flex w-full max-w-[1292px] items-center justify-between px-8 md:px-6 md:py-4">
+      <div className="flex w-full max-w-[1350px] items-center justify-between px-8 md:px-6 md:py-4">
         <Link
           aria-label="logo"
           href="/"
@@ -28,15 +28,8 @@ const Header = ({ className }: HeaderProps) => {
           {" "}
           <Image src={logo} alt="logo" width={120} height={120} />
         </Link>
-        <div className="hidden w-full max-w-[1052px] items-center justify-end md:flex xl:justify-between">
-          <SectionHeader />
-          <Button
-            variant="secondary"
-            className="bg-brand-components hidden w-full border-none sm:min-h-[45px] sm:max-w-[190px] xl:flex"
-          >
-            Заказать звонок
-          </Button>
-        </div>
+
+        <SectionHeader />
 
         <MobileMainNavigation className="md:hidden" />
       </div>
