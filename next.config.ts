@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["static-maps.yandex.ru"],
+  },
 };
 
 export default nextConfig;

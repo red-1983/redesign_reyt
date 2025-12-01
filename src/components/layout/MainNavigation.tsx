@@ -25,10 +25,10 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink asChild>
         <Link href={href}>
-          <div className="text-[clamp(0.9rem,1.5vw,1.1rem)] leading-none font-medium">
+          <div className="text-[clamp(0.9rem,1.5vw,1.2rem)] leading-none font-medium">
             {title}
           </div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+          <p className="text-muted-foreground line-clamp-2 text-[16px] leading-snug">
             {children}
           </p>
         </Link>
@@ -51,8 +51,9 @@ export function MainNavigation({ className, ...props }: MainNavigationProps) {
               <Link
                 href="/"
                 className={cn(
-                  "hover:text-brand-components bg-transparent hover:bg-transparent",
-                  pathname === "/" && "text-brand-components"
+                  "hover:text-brand-components focus:text-brand-components/80 bg-transparent hover:bg-transparent focus:bg-transparent",
+                  pathname === "/" &&
+                    "text-brand-components underline decoration-2 underline-offset-4"
                 )}
               >
                 Главная
@@ -62,8 +63,9 @@ export function MainNavigation({ className, ...props }: MainNavigationProps) {
           <NavigationMenuItem>
             <NavigationMenuTrigger
               className={cn(
-                "hover:text-brand-components data-[state=open]:hover:text-brand-components cursor-pointer bg-transparent hover:bg-transparent",
-                pathname.startsWith("/services") && "text-brand-components"
+                "hover:text-brand-components data-[state=open]:hover:text-brand-components data-[state=open]:text-brand-components focus:text-brand-components/80 cursor-pointer bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:hover:bg-transparent",
+                pathname.startsWith("/services") &&
+                  "text-brand-components underline decoration-2 underline-offset-4"
               )}
             >
               Услуги
@@ -91,8 +93,9 @@ export function MainNavigation({ className, ...props }: MainNavigationProps) {
               <Link
                 href="/portfolio"
                 className={cn(
-                  "hover:text-brand-components bg-transparent hover:bg-transparent",
-                  pathname === "/portfolio" && "text-brand-components"
+                  "hover:text-brand-components focus:text-brand-components/80 bg-transparent hover:bg-transparent focus:bg-transparent",
+                  pathname === "/portfolio" &&
+                    "text-brand-components underline decoration-2 underline-offset-4"
                 )}
               >
                 Портфолио
@@ -107,8 +110,9 @@ export function MainNavigation({ className, ...props }: MainNavigationProps) {
               <Link
                 href="/contacts"
                 className={cn(
-                  "hover:text-brand-components bg-transparent hover:bg-transparent",
-                  pathname === "/contacts" && "text-brand-components"
+                  "hover:text-brand-components focus:text-brand-components/80 bg-transparent hover:bg-transparent focus:bg-transparent",
+                  pathname === "/contacts" &&
+                    "text-brand-components underline decoration-2 underline-offset-4"
                 )}
               >
                 Контакты

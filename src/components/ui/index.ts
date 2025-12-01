@@ -11,3 +11,8 @@ export { BlockWorkTime } from "./blockWorkTime/BlockWorkTime";
 export { Copyright } from "./copyright/Copyright";
 export { SectionMain } from "./sectionMain/SectionMain";
 export { LinkService } from "./linkService/LinkService";
+export { PortfolioGallery } from "./portfolioGallery/PortfolioGallery";
+export { DivBackground } from "./divBackground/DivBackground";
+export { FormContact } from "./formContact/FormContact";
+export { CopyButton } from "./copyButton/CopyButton";
+export { BlockTelephone } from "./blockTelephone/BlockTelephone";

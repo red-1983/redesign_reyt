@@ -10,18 +10,25 @@ export const Button = ({
   children,
   className,
   variant = "primary",
+  disabled,
   ...props
 }: ButtonProps) => {
   return (
     <button
       className={cn(
-        "cursor-pointer items-center justify-center rounded-md border-2 border-none font-semibold uppercase transition-all hover:opacity-80",
+        "flex items-center justify-center rounded-md border-2 border-none font-semibold uppercase transition-all",
+
+        {
+          "cursor-pointer hover:opacity-80": !disabled,
+          "cursor-not-allowed opacity-50": disabled,
+        },
         {
           "text-black": variant === "primary",
           "text-white": variant === "secondary",
         },
         className
       )}
+      disabled={disabled}
       {...props}
     >
       {children}

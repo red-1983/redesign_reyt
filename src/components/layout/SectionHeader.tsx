@@ -1,8 +1,8 @@
 import React from "react";
-import { Geo, Tel } from "@/assets";
+import { Geo } from "@/assets";
 import clsx from "clsx";
 import Link from "next/link";
-import { BlockWorkTime, Button } from "../ui";
+import { BlockWorkTime, Button, BlockTelephone } from "../ui";
 interface SectionHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React.ReactNode;
@@ -15,7 +15,7 @@ export const SectionHeader = ({
   return (
     <div
       className={clsx(
-        "flex w-full max-w-[1100px] items-center justify-around gap-2 xl:justify-between",
+        "flex w-full max-w-[1100px] items-center justify-around gap-2 text-[clamp(0.9rem,1.5vw,1.05rem)] xl:justify-between",
         className
       )}
       {...props}
@@ -28,29 +28,7 @@ export const SectionHeader = ({
         <span>г. Мозырь, 1-ый пер. Малинина, 6Б</span>
       </Link>
       <BlockWorkTime className="hidden lg:flex" />
-      <ul className="hidden w-[max-content] flex-col gap-1.5 md:flex">
-        <li>
-          <Link
-            href="tel:8 029 235-85-97"
-            className="hover-link relative flex items-center"
-          >
-            <Tel className="absolute left-[-25px] fill-[#FC3532]" />
-            <span>8 029 235-85-97</span>
-          </Link>
-        </li>
-        <li>
-          <Link href="tel:8 033 650-86-32" className="hover-link">
-            {" "}
-            8 033 650-86-32
-          </Link>
-        </li>
-        <li>
-          <Link href="tel:8 029 2356-36-44" className="hover-link">
-            {" "}
-            8 029 2356-36-44
-          </Link>
-        </li>
-      </ul>
+      <BlockTelephone className="hidden w-[max-content] gap-1.5 md:flex md:flex-col" />
       <Button
         variant="secondary"
         className="bg-brand-components hidden w-full border-none sm:min-h-[45px] sm:max-w-[220px] xl:flex"
