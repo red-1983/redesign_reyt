@@ -144,5 +144,3 @@ export const FormaForConsuoltation = () => {
     </Form>
   );
 };
-
-export default FormaForConsuoltation;
