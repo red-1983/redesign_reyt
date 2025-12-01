@@ -1,9 +1,9 @@
 import React from "react";
 import {
-  YandexMaps,
   BlockContact,
   BlockWorkTime,
   Copyright,
+  YandexMaps,
 } from "@/components/ui";
 
 const Footer = () => {

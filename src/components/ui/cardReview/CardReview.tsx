@@ -20,7 +20,7 @@ export const CardReview = ({
   return (
     <div
       className={cn(
-        "hover:border-brand-components flex min-h-[175px] w-full max-w-[410px] cursor-pointer flex-col gap-6 rounded-md border-2 bg-white p-4 text-black transition-all duration-500 hover:text-white sm:min-h-[200px]",
+        "hover:border-brand-components flex min-h-[175px] w-full max-w-[410px] cursor-pointer flex-col gap-6 rounded-md border-2 bg-white p-4 text-black transition-all duration-500 sm:min-h-[200px]",
         className
       )}
       {...props}
