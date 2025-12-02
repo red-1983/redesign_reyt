@@ -2,7 +2,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/components/ui";
+import { MyButton } from "@/components/ui";
 import {
   Form,
   FormControl,
@@ -132,13 +132,13 @@ export const FormaForConsuoltation = () => {
           )}
         />
         <div className="w-full text-center md:text-left">
-          <Button
+          <MyButton
             variant={"secondary"}
             type="submit"
             className="bg-brand-components h-[50px] w-[300px]"
           >
             Отправить
-          </Button>
+          </MyButton>
         </div>
       </form>
     </Form>

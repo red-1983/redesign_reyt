@@ -1,22 +1,22 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface MyButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary";
 }
-export const Button = ({
+export const MyButton = ({
   children,
   className,
   variant = "primary",
   disabled,
   ...props
-}: ButtonProps) => {
+}: MyButtonProps) => {
   return (
     <button
       className={cn(
-        "flex items-center justify-center rounded-md border-2 border-none font-semibold uppercase transition-all",
+        "flex h-[50px] items-center justify-center rounded-md border-2 border-none font-semibold uppercase transition-all",
 
         {
           "cursor-pointer hover:opacity-80": !disabled,

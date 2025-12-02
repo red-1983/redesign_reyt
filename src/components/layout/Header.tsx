@@ -3,7 +3,6 @@ import clsx from "clsx";
 import { SectionHeader } from "./SectionHeader";
 import Image from "next/image";
 import logo from "@/assets/icon/logo.webp";
-import { Button } from "@/components/ui";
 import MobileMainNavigation from "./MobileMainNavigation";
 
 import Link from "next/link";

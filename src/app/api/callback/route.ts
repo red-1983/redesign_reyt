@@ -1,15 +1,14 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { contactFormSchema } from "@/lib/schemas/contactFormSchema";
+import { callbackFormSchema } from "@/lib/schemas/callbackFormSchema";
 import { sendEmail } from "@/lib/mailer";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const validationResult = contactFormSchema.safeParse(body);
+    const validationResult = callbackFormSchema.safeParse(body);
 
     if (!validationResult.success) {
-      // Применяем ваше исправление
       const flattenedErrors = z.flattenError(validationResult.error);
       return NextResponse.json(
         {
@@ -20,19 +19,13 @@ export async function POST(request: Request) {
       );
     }
 
-    const { userName, phone, email, textarea, checkbox } =
-      validationResult.data;
+    const { userName, phone } = validationResult.data;
 
     const emailHtml = `
-      <h1>Новая заявка с контактной формы сайта</h1>
+      <h1>Заявка с сайта на обратный звонок</h1>
       <p><strong>Имя:</strong> ${userName}</p>
       <p><strong>Телефон:</strong> ${phone}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Пользователь согласился на обработку персональных данных:</strong> ${checkbox}</p>
-      <hr>
-      <p><strong>Сообщение:</strong></p>
-      <p>${textarea || "Пользователь не оставил сообщения."}</p>
-    `;
+         `;
 
     await sendEmail({
       to: process.env.EMAIL_USER!,
@@ -42,7 +35,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ message: "Сообщение успешно отправлено!" });
   } catch (error) {
-    console.error("Ошибка в API-маршруте /api/contact:", error);
+    console.error("Ошибка в API-маршруте /api/callback:", error);
     return NextResponse.json(
       { message: "Произошла внутренняя ошибка сервера." },
       { status: 500 }

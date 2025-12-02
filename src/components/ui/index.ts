@@ -1,4 +1,4 @@
-export { Button } from "./button/Button";
+export { MyButton } from "./button/MyButton";
 export { MobileNav } from "./mobileNav/MobileNav";
 export { IconMenu } from "./iconLucide/IconMenu";
 export { IconCard } from "./iconCard/IconCard";
@@ -16,3 +16,6 @@ export { DivBackground } from "./divBackground/DivBackground";
 export { FormContact } from "./formContact/FormContact";
 export { CopyButton } from "./copyButton/CopyButton";
 export { BlockTelephone } from "./blockTelephone/BlockTelephone";
+export { Popap } from "./popap/Popap";
+export { FormCallback } from "./formCallback/FormCallback";
+export { PopoverCallback } from "./popover/PopoverCallback";

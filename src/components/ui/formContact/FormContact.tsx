@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Button } from "@/components/ui";
+import { MyButton } from "@/components/ui";
 import { Spinner } from "@/components/ui/spinner";
 import { toast } from "sonner";
 import {
@@ -209,7 +209,7 @@ export const FormContact = () => {
         />
 
         <div className="mt-5 w-full text-center md:text-left">
-          <Button
+          <MyButton
             variant={"secondary"}
             type="submit"
             className="bg-brand-components h-[50px] w-[300px]"
@@ -218,7 +218,7 @@ export const FormContact = () => {
             }
           >
             {isSubmitting ? <Spinner className="size-6" /> : "Отправить"}
-          </Button>
+          </MyButton>
         </div>
       </form>
     </Form>
