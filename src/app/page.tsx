@@ -15,13 +15,15 @@ import {
 } from "@/assets";
 import { Card } from "@/components/ui/card/Card";
 import {
-  Button,
+  MyButton,
   LinkService,
   IconCard,
   CarouselImage,
   FormaForConsuoltation,
+  FormContact,
   CaruselReviews,
   SectionMain,
+  Popap,
 } from "@/components/ui";
 export default function Home() {
   return (
@@ -40,22 +42,17 @@ export default function Home() {
             полутневшей фары. Работаем качественно, оперативно, даем гарантию.
             Вернем прозрачность, яркость и прохладу!"
       >
-        <Button
-          variant="secondary"
-          className="bg-brand-components hidden h-[50px] w-[300px] sm:flex"
-        >
-          Оставить заявку
-        </Button>
+        <Popap className="hidden sm:flex">
+          <FormContact />
+        </Popap>
       </SectionMain>
 
       <div className="mx-auto max-w-[1350px] px-4">
         <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0 md:mb-30">
-          <Button
-            variant="secondary"
-            className="bg-brand-components flex h-[50px] w-[300px] sm:hidden"
-          >
-            Оставить заявку
-          </Button>
+          <Popap className="flex sm:hidden">
+            <FormContact />
+          </Popap>
+
           <div className="flex h-[min-content] flex-col items-center justify-between">
             <h2 className="self-start">О компании</h2>
             <div className="flex h-[min-content] w-full items-center justify-between gap-[1%]">
