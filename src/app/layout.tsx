@@ -5,6 +5,7 @@ import "./globals.css";
 import { MainNavigation } from "@/components/layout/MainNavigation";
 import { Footer } from "@/components";
 import { cn } from "@/lib/utils";
+import { ButtonUp } from "@/components/ui";
 import { Toaster } from "@/components/ui/sonner";
 const RobotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -36,13 +37,12 @@ export default function RootLayout({
           <Header className="bg-brand-body mx-auto w-full text-white" />
           <main className="text-brandText bg-brand-body relative">
             <MainNavigation className="absolute z-20 w-full pt-4 text-black" />
-
             {children}
           </main>
           <Footer />
+          <ButtonUp />
         </div>
-        <Toaster position="top-center"
-         />
+        <Toaster position="top-center" />
       </body>
     </html>
   );

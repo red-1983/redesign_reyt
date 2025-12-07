@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Popover,
@@ -5,14 +6,20 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { MyButton } from "../button/MyButton";
+import { usePopupLogic } from "@/hooks/usePopupLogic";
 
 interface PopoverCallbackProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode | ((close: () => void) => React.ReactNode);
+  className?: string;
 }
-export const PopoverCallback = ({ children }: PopoverCallbackProps) => {
+export const PopoverCallback = ({
+  children,
+  className,
+}: PopoverCallbackProps) => {
+  const { open, setOpen, renderChildren } = usePopupLogic(children);
   return (
-    <Popover>
-      <PopoverTrigger>
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
         <MyButton
           variant="secondary"
           className="bg-brand-components hidden w-full border-none p-4 sm:h-[40px] sm:max-w-[200px] xl:flex"
@@ -20,7 +27,7 @@ export const PopoverCallback = ({ children }: PopoverCallbackProps) => {
           Заказать звонок
         </MyButton>
       </PopoverTrigger>
-      <PopoverContent>{children}</PopoverContent>
+      <PopoverContent>{renderChildren()}</PopoverContent>
     </Popover>
   );
 };

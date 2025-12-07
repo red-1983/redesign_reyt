@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DivBackground, BlockWorkTime } from "@/components/ui";
+import { DivBackground, BlockWorkTime, Breadcrumbs } from "@/components/ui";
 import bgImage from "../../../public/images/nav/bg_navigation.webp";
 import { FormContact, CopyButton, BlockTelephone } from "@/components/ui";
 import Link from "next/link";
@@ -20,6 +20,7 @@ function Contacts() {
         imageALT="bgImage"
         className="hidden h-17 md:block"
       />
+      <Breadcrumbs className="[&_[data-slot=breadcrumb-list]]:text-brand-components mx-auto flex w-full max-w-[1350px]" />
       <section className="mx-auto flex max-w-[1350px] flex-wrap items-center justify-around gap-10 px-4 pt-15 pb-20">
         <div className="w-full max-w-[500px]">
           <h2 className="mt-0">Написать нам</h2>

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useCallback } from "react";
 import { MyButton } from "../button/MyButton";
 
 import { cn } from "@/lib/utils";
@@ -10,20 +11,21 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-
+import { usePopupLogic } from "@/hooks/usePopupLogic";
 interface PopapProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode | ((close: () => void) => React.ReactNode);
   className?: string;
 }
 
 export const Popap = ({ children, className }: PopapProps) => {
+  const { open, setOpen, renderChildren } = usePopupLogic(children);
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <MyButton
           variant="secondary"
           className={cn(
-            "bg-brand-components hidden h-[50px] w-[300px] text-[clamp(1rem,1.5vw,1.2rem)] text-white sm:flex",
+            "bg-brand-components h-[50px] w-[300px] text-[clamp(1rem,1.5vw,1.2rem)] text-white",
             className
           )}
         >
@@ -39,7 +41,7 @@ export const Popap = ({ children, className }: PopapProps) => {
             Наш менеджер свяжется с Вами в ближайшее время
           </DialogDescription>
         </DialogHeader>
-        {children}
+        {renderChildren()}
       </DialogContent>
     </Dialog>
   );
