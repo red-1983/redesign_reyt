@@ -13,18 +13,19 @@ import {
   List,
   Quality,
 } from "@/assets";
-import { Card } from "@/components/ui/card/Card";
 import {
-  MyButton,
   LinkService,
   IconCard,
   CarouselImage,
-  FormaForConsuoltation,
+  FormaForConsultation,
   FormContact,
   CaruselReviews,
   SectionMain,
   Popap,
+  Breadcrumbs,
+  Card,
 } from "@/components/ui";
+
 export default function Home() {
   return (
     <>
@@ -46,7 +47,7 @@ export default function Home() {
           <FormContact />
         </Popap>
       </SectionMain>
-
+      <Breadcrumbs className="[&_[data-slot=breadcrumb-list]]:text-brand-components mx-auto flex w-full max-w-[1350px]" />
       <div className="mx-auto max-w-[1350px] px-4">
         <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0 md:mb-30">
           <Popap className="flex sm:hidden">
@@ -178,7 +179,7 @@ export default function Home() {
                 предложит оптимальное решение для вашего автомобиля
               </span>
             </p>
-            <FormaForConsuoltation />
+            <FormaForConsultation />
           </div>
         </div>
       </section>

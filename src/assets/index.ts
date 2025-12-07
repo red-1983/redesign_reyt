@@ -16,3 +16,8 @@ export { default as carouselImage1 } from "./img/carousel/carouselImage1.webp";
 export { default as carouselImage2 } from "./img/carousel/carouselImage2.webp";
 export { default as carouselImage3 } from "./img/carousel/carouselImage3.webp";
 export { default as imgForm } from "./img/imageForm.webp";
+export { default as replacement1 } from "./img/glass-replacement/sectionMain.webp";
+export { default as replacement2 } from "./img/glass-replacement/image1.webp";
+export { default as replacement3 } from "./img/glass-replacement/image2.webp";
+export { default as replacement4 } from "./img/glass-replacement/image3.webp";
+export { default as replacement5 } from "./img/glass-replacement/image4.webp";

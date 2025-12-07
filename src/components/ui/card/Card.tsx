@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -22,19 +21,22 @@ export const Card = ({
     <li
       className={cn(
         `${className} group`,
-        "mb-15 flex h-[310px] w-[310px] cursor-pointer flex-col items-center justify-between sm:h-[325px]",
+        "mb-15 flex min-h-[310px] w-[310px] cursor-pointer flex-col items-center justify-between sm:min-h-[325px]",
         className
       )}
       {...props}
     >
       <div className="flex w-full flex-col items-center gap-2">
         {" "}
-        <div className="w-full overflow-hidden">
+        <div className="relative h-[250px] w-[300px] overflow-hidden">
           {image && altImage && (
             <Image
               src={image}
               alt={altImage}
-              className="min-h-[200px] w-[300px] transition-transform duration-300 ease-in-out group-hover:scale-110 group-active:scale-110"
+              fill
+              style={{ objectFit: "cover" }}
+              placeholder="blur"
+              className="transition-transform duration-300 ease-in-out group-hover:scale-110 group-active:scale-110"
             />
           )}
         </div>

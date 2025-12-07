@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { MyButton } from "@/components/ui";
 import { Spinner } from "@/components/ui/spinner";
-import { toast } from "sonner";
+
 import {
   Form,
   FormControl,
@@ -20,8 +20,11 @@ import {
   contactFormSchema,
   ContactFormValues,
 } from "@/lib/schemas/contactFormSchema";
-
-export const FormContact = () => {
+import { useFormSubmit } from "@/hooks/useFormSubmit";
+interface FormContactProps {
+  onSuccess?: () => void;
+}
+export const FormContact = ({ onSuccess }: FormContactProps) => {
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     mode: "onChange",
@@ -34,7 +37,7 @@ export const FormContact = () => {
     },
   });
   const [isDownloadFile, setIsDownloadFile] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     if (localStorage.getItem("policyDownLoaded") === "true")
       setIsDownloadFile(true);
@@ -44,32 +47,15 @@ export const FormContact = () => {
     localStorage.setItem("policyDownLoaded", "true");
     setIsDownloadFile(true);
   };
-
+  const { submitForm, isSubmitting } = useFormSubmit({
+    endpoint: "/api/contact",
+    onSuccess: () => {
+      form.reset();
+      onSuccess?.();
+    },
+  });
   async function onSubmit(values: ContactFormValues) {
-    setIsSubmitting(true);
-
-    const promise = fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Ошибка сервера");
-        }
-        form.reset();
-        return res.json();
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
-    toast.promise(promise, {
-      loading: "Отправка сообщения...",
-      success: "Сообщение успешно отправлено!",
-      error: "Произошла ошибка при отправке.",
-    });
+    await submitForm(values);
   }
 
   return (
@@ -195,7 +181,7 @@ export const FormContact = () => {
                   </p>
                 </FormLabel>
               </FormItem>
-              <div className="h-10">
+              <div className="h-10 text-center">
                 {!form.formState.errors.checkbox && !isDownloadFile && (
                   <p>
                     Пожалуйста, скачайте и ознакомьтесь с Политикой

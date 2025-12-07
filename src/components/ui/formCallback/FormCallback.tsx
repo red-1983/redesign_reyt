@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { MyButton } from "@/components/ui";
 import { Spinner } from "@/components/ui/spinner";
-import { toast } from "sonner";
+
 import {
   Form,
   FormControl,
@@ -18,7 +18,11 @@ import {
   callbackFormSchema,
   CallbackFormValues,
 } from "@/lib/schemas/callbackFormSchema";
-export const FormCallback = () => {
+import { useFormSubmit } from "@/hooks/useFormSubmit";
+interface FormCallbackProps {
+  onSuccess?: () => void;
+}
+export const FormCallback = ({ onSuccess }: FormCallbackProps) => {
   const form = useForm<CallbackFormValues>({
     resolver: zodResolver(callbackFormSchema),
     mode: "onChange",
@@ -27,35 +31,16 @@ export const FormCallback = () => {
       phone: "",
     },
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const { submitForm, isSubmitting } = useFormSubmit({
+    endpoint: "/api/callback",
+    onSuccess: () => {
+      form.reset();
+      onSuccess?.();
+    },
+  });
   async function onSubmit(values: CallbackFormValues) {
-    setIsSubmitting(true);
-
-    const promise = fetch("/api/callback", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Ошибка сервера");
-        }
-        form.reset();
-        return res.json();
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
-    toast.promise(promise, {
-      loading: "Отправка сообщения...",
-      success: "Сообщение успешно отправлено!",
-      error: "Произошла ошибка при отправке.",
-    });
+    await submitForm(values);
   }
-
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-1">
@@ -87,7 +72,7 @@ export const FormCallback = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-[clamp(0.9rem,1.5vw,1rem]">
-                Номер телефона
+                Номер телефона (обязательное поле)
               </FormLabel>
               <FormControl>
                 <Input
