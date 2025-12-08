@@ -47,7 +47,7 @@ export default function Home() {
           <FormContact />
         </Popap>
       </SectionMain>
-      <Breadcrumbs className="[&_[data-slot=breadcrumb-list]]:text-brand-components mx-auto flex w-full max-w-[1350px]" />
+      <Breadcrumbs className="[&_[data-slot=breadcrumb-list]]:text-brand-components mx-auto flex w-full max-w-[1350px] md:hidden" />
       <div className="mx-auto max-w-[1350px] px-4">
         <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0 md:mb-30">
           <Popap className="flex sm:hidden">

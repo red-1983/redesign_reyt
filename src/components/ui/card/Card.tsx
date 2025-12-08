@@ -26,7 +26,7 @@ export const Card = ({
       )}
       {...props}
     >
-      <div className="flex w-full flex-col items-center gap-2">
+      <div className="flex w-full flex-col items-center gap-4">
         {" "}
         <div className="relative h-[250px] w-[300px] overflow-hidden">
           {image && altImage && (
