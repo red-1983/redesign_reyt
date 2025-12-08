@@ -15,7 +15,7 @@
     @apply hover:text-brand-components transition-colors;
   }
   h2 {
-    @apply mt-15 mb-7 text-[clamp(1.25rem,2.5vw,2.2rem)] font-bold tracking-wider uppercase sm:mt-30 sm:mb-15;
+    @apply mt-10 mb-7 text-[clamp(1.25rem,2.5vw,2.2rem)] font-bold tracking-wider uppercase sm:mt-20 sm:mb-15;
   }
   h3 {
     @apply text-[clamp(1rem,2vw,1.2rem)] font-bold tracking-wider;

@@ -20,7 +20,7 @@ function Contacts() {
         imageALT="bgImage"
         className="hidden h-17 md:block"
       />
-      <Breadcrumbs className="[&_[data-slot=breadcrumb-list]]:text-brand-components mx-auto flex w-full max-w-[1350px]" />
+      <Breadcrumbs className="[&_[data-slot=breadcrumb-list]]:text-brand-components mx-auto flex w-full max-w-[1350px] md:hidden" />
       <section className="mx-auto flex max-w-[1350px] flex-wrap items-center justify-around gap-10 px-4 pt-15 pb-20">
         <div className="w-full max-w-[500px]">
           <h2 className="mt-0">Написать нам</h2>
