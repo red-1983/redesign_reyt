@@ -22,3 +22,4 @@ export { PopoverCallback } from "./popover/PopoverCallback";
 export { Breadcrumbs } from "./breadcrumb/Breadcrumbs";
 export { ButtonUp } from "./buttonUp/ButtonUp";
 export { Card } from "./card/Card";
+export { MovingStrip } from "./movingStrip/MovingStrip";

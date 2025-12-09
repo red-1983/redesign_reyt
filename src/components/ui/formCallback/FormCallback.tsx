@@ -49,7 +49,7 @@ export const FormCallback = ({ onSuccess }: FormCallbackProps) => {
           name="userName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-[clamp(0.9rem,1.5vw,1rem]">
+              <FormLabel className="text-[clamp(0.9rem,1.5vw,1rem] text">
                 Ваше имя
               </FormLabel>
               <FormControl>
