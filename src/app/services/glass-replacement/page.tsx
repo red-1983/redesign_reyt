@@ -6,6 +6,7 @@ import {
   FormContact,
   Card,
   IconCard,
+  MovingStrip,
 } from "@/components/ui";
 import {
   replacement1,
@@ -98,7 +99,7 @@ const GlassReplacement = () => {
             </IconCard>
           </ul>
         </section>
-        <div className="mt-10">
+        <div className="mt-10 w-full">
           <h3>
             Работаем с ведущими мировыми производителями автомобильных стекол
           </h3>

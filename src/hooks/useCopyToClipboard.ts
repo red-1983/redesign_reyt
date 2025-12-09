@@ -6,11 +6,16 @@ import { toast } from "sonner";
 export const useCopyToClipboard = (timeout = 2000) => {
   const [copied, setCopied] = useState(false);
 
+  
+
   const handleCopy = useCallback(
     async (text: string) => {
       if (!text) return;
 
       try {
+        if (!navigator.clipboard) {
+          throw new Error("Clipboard API не поддерживается в этом браузере.");
+        }
         await navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), timeout);
