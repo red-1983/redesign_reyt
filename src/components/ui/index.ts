@@ -23,3 +23,5 @@ export { Breadcrumbs } from "./breadcrumb/Breadcrumbs";
 export { ButtonUp } from "./buttonUp/ButtonUp";
 export { Card } from "./card/Card";
 export { MovingStrip } from "./movingStrip/MovingStrip";
+export { MotionString } from "./motionString/MotionString";
+export { VideoPlayer } from "./videoplayer/VideoPlayer";

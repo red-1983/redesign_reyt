@@ -28,15 +28,13 @@ export const IconCard = ({
   return (
     <li
       className={clsx(
-        className,
-        "group flex h-[min-content] max-w-[200px] flex-col items-center gap-5"
+        "group flex h-[min-content] max-w-[200px] flex-col items-center gap-5",
+        className
       )}
       {...props}
     >
       {iconWithProps}
-      <p className="w-full text-center text-[clamp(1.2rem,1.5vw,1.6rem)]">
-        {title}
-      </p>
+      <p className="text-fontSize-18-24 w-full text-center">{title}</p>
     </li>
   );
 };
