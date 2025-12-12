@@ -18,7 +18,7 @@ export default function Page() {
         imageALT="bgImage"
         className="hidden h-17 md:block"
       />
-      <Breadcrumbs className="[&_[data-slot=breadcrumb-list]]:text-brand-components mx-auto flex w-full max-w-[1350px] md:hidden" />
+      <Breadcrumbs className="mx-auto flex w-full max-w-[1350px] md:hidden [&_[data-slot=breadcrumb-list]]:text-[#bebebe]" />
       <section className="h-fullflex-wrap mx-auto flex max-w-[1350px] flex-col gap-10 px-4 pb-20">
         <h2 className="">Наши работы</h2>
 

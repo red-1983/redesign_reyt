@@ -2,7 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["static-maps.yandex.ru"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "static-maps.yandex.ru",
+        port: "",
+        pathname: "/**",
+      },
+    ],
   },
 };
 

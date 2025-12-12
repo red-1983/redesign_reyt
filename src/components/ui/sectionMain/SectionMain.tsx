@@ -17,8 +17,6 @@ export const SectionMain = ({
   text,
   mainText,
   className,
-  mainTextClassName,
-  textClassName,
   h1,
   imageSRC,
   imageALT,
@@ -32,6 +30,7 @@ export const SectionMain = ({
       )}
     >
       <h1 className="sr-only">{h1}</h1>
+
       <Image
         src={imageSRC}
         alt={imageALT}
@@ -43,19 +42,25 @@ export const SectionMain = ({
         className="z-0"
         priority
       />
-      <div className="z-10 flex w-full max-w-[1350px] flex-col justify-center gap-10 px-4 lg:gap-20">
+
+      <div
+        data-slot="section-text"
+        className="z-10 flex w-full max-w-[1350px] flex-col justify-center gap-5 px-4"
+      >
         <p
+          data-slot="main-text"
           className={cn(
             "xs:leading-snug xmd:w-[50%] w-[60%] text-[clamp(1rem,3.3vw,2.5rem)] leading-[1.5rem] font-bold tracking-wide text-[#000000c7] lowercase first-letter:uppercase md:w-full",
-            mainTextClassName
+            className
           )}
         >
           {mainText}
         </p>
         <p
+          data-slot="text"
           className={cn(
             "hidden w-[50%] text-[clamp(1rem,2.5vw,1.4rem)] font-bold text-[#000000c4] md:block lg:block lg:w-[600px]",
-            textClassName
+            className
           )}
         >
           {text}
