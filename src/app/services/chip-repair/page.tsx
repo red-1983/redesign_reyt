@@ -111,7 +111,7 @@ const ChipRepair = () => {
           профеcсионалов НТВ+ передача “Главная дорога”.
         </h3>
         <VideoPlayer
-          src="/video/videoplayback_2.mp4"
+          src=""
           title="Познавательный видеоролик о дефектах автомобильного стекла"
           poster="/video/road.webp"
           className="max-w-[85%] md:max-w-[70%]"
