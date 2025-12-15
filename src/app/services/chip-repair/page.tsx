@@ -10,15 +10,7 @@ import {
   MotionString,
   VideoPlayer,
 } from "@/components/ui";
-import {
-  repair1,
-  repair2,
-  repair3,
-  repair4,
-  repair5,
-  serviceCar,
-} from "@/assets";
-import Image from "next/image";
+import { repair1, repair2, repair3, repair4, repair5 } from "@/assets";
 import { advantageRepair } from "@/data/advantageRepair";
 export const metadata: Metadata = {
   title: "Ремонт трещин и сколов автомобильных стекол в Мозыре | Reyt.by",
