@@ -1,7 +1,7 @@
-interface CarProps extends React.ComponentProps<"svg"> {
+"use client";
+interface CarProps {
   className?: string;
 }
-
 export const Car = ({ className, ...props }: CarProps) => {
   return (
     <svg
