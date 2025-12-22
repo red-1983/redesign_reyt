@@ -10,11 +10,13 @@ import {
   MotionString,
 } from "@/components/ui";
 import {
-  replacement1,
-  replacement2,
-  replacement3,
-  replacement4,
-  replacement5,
+  replacementSectionMainImages,
+  imageReplacementCard1,
+  imageReplacementCard2,
+  imageReplacementCard3,
+  imageReplacementCard4,
+} from "@/data/image-sets";
+import {
   serviceCar,
   Worker,
   Consultation,
@@ -37,7 +39,7 @@ const GlassReplacement = () => {
     <>
       <SectionMain
         h1="Aвтостекло Мозырь, замена автостекол, замена автостекла с выездом, быстро, качественно, недорого  - reyt.by"
-        imageSRC={replacement1}
+        imageSRC={replacementSectionMainImages}
         imageALT="Фоновое изображение навигационной секции"
         mainText={
           <>
@@ -62,23 +64,23 @@ const GlassReplacement = () => {
           <h2 className="">Предлагаем</h2>
           <ul className="flex flex-wrap justify-center gap-5 sm:justify-around">
             <Card
-              image={replacement2}
-              altImage="Изображение-замена бокового стекла автомобиля"
+              imageSRC={imageReplacementCard1}
+              imageALT="Изображение-замена бокового стекла автомобиля"
               h3="Замену бокового стекла автомобиля"
             ></Card>
             <Card
-              image={replacement3}
-              altImage="Изображение-замена лобового стекла автомобиля"
+              imageSRC={imageReplacementCard2}
+              imageALT="Изображение-замена лобового стекла автомобиля"
               h3="Замену лобового стекла автомобиля"
             ></Card>
             <Card
-              image={replacement4}
-              altImage="Изображение-замена заднего стекла автомобиля"
+              imageSRC={imageReplacementCard3}
+              imageALT="Изображение-замена заднего стекла автомобиля"
               h3="Замену заднего стекла автомобиля"
             ></Card>
             <Card
-              image={replacement5}
-              altImage="Изображение-замена панорамного стекла автомобиля"
+              imageSRC={imageReplacementCard4}
+              imageALT="Изображение-замена панорамного стекла автомобиля"
               h3="Замену панорамного стекла или люка автомобиля"
             ></Card>
           </ul>

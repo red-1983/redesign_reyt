@@ -1,10 +1,11 @@
 import Image, { type StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
+import { ResponsiveImageSources } from "@/types";
 
 interface SectionMainProps extends React.ComponentProps<"section"> {
   children: React.ReactNode;
   h1: string;
-  imageSRC: string | StaticImageData;
+  imageSRC: string | ResponsiveImageSources;
   imageALT: string;
   className?: string;
   mainText?: React.ReactNode;
@@ -30,18 +31,40 @@ export const SectionMain = ({
       )}
     >
       <h1 className="sr-only">{h1}</h1>
-
-      <Image
-        src={imageSRC}
-        alt={imageALT}
-        fill
-        sizes="100vw"
-        quality={100}
-        style={{ objectFit: "cover" }}
-        placeholder="blur"
-        className="z-0"
-        priority
-      />
+      {typeof imageSRC === "object" && "desktop" in imageSRC ? (
+        <picture>
+          <source
+            media="(min-width:1024px) "
+            srcSet={(imageSRC.desktop as StaticImageData).src}
+          />
+          <source
+            media="(min-width: 768px)"
+            srcSet={(imageSRC.tablet as StaticImageData).src}
+          />
+          <Image
+            src={imageSRC.mobile}
+            alt={imageALT}
+            fill
+            sizes="100vw"
+            quality={100}
+            style={{ objectFit: "cover" }}
+            placeholder="blur"
+            priority
+          />
+        </picture>
+      ) : (
+        <Image
+          src={imageSRC as string | StaticImageData}
+          alt={imageALT}
+          fill
+          sizes="100vw"
+          quality={100}
+          style={{ objectFit: "cover" }}
+          placeholder="blur"
+          className="z-0"
+          priority
+        />
+      )}
 
       <div
         data-slot="section-text"

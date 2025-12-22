@@ -11,12 +11,13 @@ import {
   MotionString,
 } from "@/components/ui";
 import {
-  polishing1,
-  repair2,
-  replacement3,
-  replacement4,
-  replacement5,
-  serviceCar,
+  imageRepairCard1,
+  polishingSectionMainImages,
+  imagePolishingCard2,
+  imagePolishingCard3,
+  imagePolishingCard4,
+} from "@/data/image-sets";
+import {
   Worker,
   Consultation,
   EEClogo,
@@ -26,7 +27,7 @@ import {
   Tractor,
   Truck,
 } from "@/assets";
-import Image from "next/image";
+
 import { polishingFeatures } from "@/data/polishingFeatures";
 export const metadata: Metadata = {
   title: "Полировка фар в Мозыре | Reyt.by",
@@ -39,7 +40,7 @@ const HeadlightPolishing = () => {
     <>
       <SectionMain
         h1="Полировка фар в Мозыре, быстро, качественно, недорого. Восстановление фар, восстановление прозрачности пластика фары, продажа фар  - reyt.by"
-        imageSRC={polishing1}
+        imageSRC={polishingSectionMainImages}
         imageALT="Фоновое изображение навигационной секции"
         mainText={
           <>
@@ -63,23 +64,23 @@ const HeadlightPolishing = () => {
           <h2 className="">Предлагаем</h2>
           <ul className="flex flex-wrap justify-center gap-5 sm:justify-around">
             <Card
-              image={repair2}
-              altImage="Изображение-консультация по полировке фар"
+              imageSRC={imageRepairCard1}
+              imageALT="Изображение-консультация по полировке фар"
               h3="Бесплатную консультацию по полировке фар или их замене на Вашем автомобиле. Предложим Вам оптимальный вариант"
             ></Card>
             <Card
-              image={replacement3}
-              altImage="Изображение-квалифицированные специалисты"
+              imageSRC={imagePolishingCard2}
+              imageALT="Изображение-квалифицированные специалисты"
               h3="Полировку фар квалифицированными опытными специалистами. Восстановим прозрачность фары. Нанесем защитную пленку или покрытие"
             ></Card>
             <Card
-              image={replacement4}
-              altImage="Изображение-подготовка фары к прохождению техосмотра"
+              imageSRC={imagePolishingCard3}
+              imageALT="Изображение-подготовка фары к прохождению техосмотра"
               h3="Подготовку фар вашего автомобиля к прохождению техосмотра. Проверим и при необходимости отрегулируем потока света ваших фар"
             ></Card>
             <Card
-              image={replacement5}
-              altImage="Изображение-подбор фар в нашем магазине"
+              imageSRC={imagePolishingCard4}
+              imageALT="Изображение-подбор фар в нашем магазине"
               h3="Предложим оптимальный вариант (цена-качество) при покупке фар в нашем магазине. Выполним замену"
             ></Card>
           </ul>

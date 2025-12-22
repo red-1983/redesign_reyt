@@ -10,7 +10,13 @@ import {
   MotionString,
   VideoPlayer,
 } from "@/components/ui";
-import { repair1, repair2, repair3, repair4, repair5 } from "@/assets";
+import {
+  repairSectionMainImages,
+  imageRepairCard1,
+  imageRepairCard2,
+  imageRepairCard3,
+  imageRepairCard4,
+} from "@/data/image-sets";
 import { advantageRepair } from "@/data/advantageRepair";
 export const metadata: Metadata = {
   title: "Ремонт трещин и сколов автомобильных стекол в Мозыре | Reyt.by",
@@ -22,7 +28,7 @@ const ChipRepair = () => {
     <>
       <SectionMain
         h1="Aвтостекло Мозырь, ремонт трещин и сколов автостекла с выездом, быстро, качественно, недорого  - reyt.by"
-        imageSRC={repair1}
+        imageSRC={repairSectionMainImages}
         imageALT="Фоновое изображение навигационной секции"
         mainText={
           <>
@@ -45,23 +51,23 @@ const ChipRepair = () => {
           <h2 className="">Предлагаем</h2>
           <ul className="flex flex-wrap justify-center gap-5 sm:justify-around">
             <Card
-              image={repair2}
-              altImage="Изображение-бесплатная консультация по поврежденному автомобильному стеклу"
+              imageSRC={imageRepairCard1}
+              imageALT="Изображение-бесплатная консультация по поврежденному автомобильному стеклу"
               h3="Бесплатную консультацию по поврежденному автомобильному стеклу Вашего автомобиля"
             ></Card>
             <Card
-              image={repair5}
-              altImage="Изображение-качественный ремонт трещин и сколов опытным персоналом"
+              imageSRC={imageRepairCard4}
+              imageALT="Изображение-качественный ремонт трещин и сколов опытным персоналом"
               h3="Качественный ремонт трещин и сколов опытным персоналом, с использованием специализированного инструмента и применением профессиональных материалов."
             ></Card>
             <Card
-              image={repair4}
-              altImage="Изображение-"
+              imageSRC={imageRepairCard3}
+              imageALT="Изображение-"
               h3="В случае невозможности ремонта автомобильного стекла (в виду сильного повреждения или уменьшению прочности стекла при ремонте), мы предложим Вам новое стекло в наличии или под заказ."
             ></Card>
             <Card
-              image={repair3}
-              altImage="Изображение-замена панорамного стекла автомобиля"
+              imageSRC={imageRepairCard2}
+              imageALT="Изображение-замена панорамного стекла автомобиля"
               h3="Ремонт трещин и сколов автомобильного стекла с выездом нашего мастера. Выезд мастера по Мозырю и Мозырскому району."
             ></Card>
           </ul>
