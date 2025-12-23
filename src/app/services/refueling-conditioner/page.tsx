@@ -54,7 +54,7 @@ const RefulingConditioner = () => {
       </SectionMain>
       <Breadcrumbs className="mx-auto flex w-full max-w-[1350px] [&_[data-slot=breadcrumb-list]]:text-[#bebebe]" />
       <div className="mx-auto max-w-[1350px] px-4">
-        <section className="bg-brand-body pt-0.5">
+        <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0 md:mb-30">
           <Popap className="flex sm:hidden">
             <FormContact />
           </Popap>
@@ -152,7 +152,7 @@ const RefulingConditioner = () => {
         </ul>
       </section>
       <section className="bg-brand-body mb-15 flex flex-col pt-0.5 md:mb-30">
-        <h2 className="self-start">ЗКак часто нужно заправлять кондиционер</h2>
+        <h2 className="self-start">Как часто нужно заправлять кондиционер</h2>
         <MotionString array={polishingFeatures} />
         <p>
           Даже в полностью исправной системе происходит естественная утечка
