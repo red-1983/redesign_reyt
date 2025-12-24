@@ -54,11 +54,11 @@ const RefulingConditioner = () => {
       </SectionMain>
       <Breadcrumbs className="mx-auto flex w-full max-w-[1350px] [&_[data-slot=breadcrumb-list]]:text-[#bebebe]" />
       <div className="mx-auto max-w-[1350px] px-4">
-        <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0 md:mb-30">
+        <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0">
           <Popap className="flex sm:hidden">
             <FormContact />
           </Popap>
-          <h2 className="">Предлагаем</h2>
+          <h2 className="self-start">Предлагаем</h2>
           <p>
             Комфортная температура в салоне автомобиля — это не роскошь, а
             необходимость, особенно в жаркое летнее время. Система
