@@ -18,7 +18,9 @@ import {
   imagePolishingCard4,
 } from "@/data/image-sets";
 import {
-  Worker,
+  Wrench,
+  Polishing,
+  Headlight,
   Consultation,
   EEClogo,
   QualityMedal,
@@ -57,11 +59,11 @@ const HeadlightPolishing = () => {
       </SectionMain>
       <Breadcrumbs className="mx-auto flex w-full max-w-[1350px] [&_[data-slot=breadcrumb-list]]:text-[#bebebe]" />
       <div className="mx-auto max-w-[1350px] px-4">
-        <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0 md:mb-30">
+        <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0">
           <Popap className="flex sm:hidden">
             <FormContact />
           </Popap>
-          <h2 className="">Предлагаем</h2>
+          <h2 className="self-start">Предлагаем</h2>
           <ul className="flex flex-wrap justify-center gap-5 sm:justify-around">
             <Card
               imageSRC={imageRepairCard1}
@@ -92,25 +94,25 @@ const HeadlightPolishing = () => {
               className="max-w-[310px]"
               title="Ответственность и профессионализм. Мы аккуратно выполним демонтаж навесного оборудования, а также обеспечим сохранность деталей автомобиля"
             >
-              <Worker className="h-38 w-38 fill-white" />
+              <Wrench className="h-38 w-38" />
             </IconCard>
             <IconCard
               className="max-w-[310px]"
-              title="Используем качественные наборы и материалы для палировки фар. Всегда применяем профессиональные пасты"
+              title="Используем качественные наборы и материалы для полировки фар. Всегда применяем профессиональные пасты"
             >
-              <EEClogo className="h-38 w-70" />
+              <QualityMedal className="h-38 w-38 fill-white" />
             </IconCard>
             <IconCard
               className="max-w-[310px]"
               title=" Выполним полировку фары Вашего автомобиля с учетом всех конструктивных особенностей. Быстро, профессионально и недорого"
             >
-              <Consultation className="h-38 w-38" />
+              <Polishing className="h-38 w-38" />
             </IconCard>
             <IconCard
               className="max-w-[310px]"
               title=" Подберем оптимальные фары для Вашего автомобиля и выполним замену. Сотрудничаем с ведущими мировыми производителями"
             >
-              <QualityMedal className="h-38 w-38 fill-white" />
+              <Headlight className="h-40 w-40 fill-white" />
             </IconCard>
           </ul>
         </section>
