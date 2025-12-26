@@ -78,7 +78,7 @@ const HeadlightPolishing = () => {
             <Card
               imageSRC={imagePolishingCard3}
               imageALT="Изображение-подготовка фары к прохождению техосмотра"
-              h3="Подготовку фар вашего автомобиля к прохождению техосмотра. Проверим и при необходимости отрегулируем потока света ваших фар"
+              h3="Подготовку фар вашего автомобиля к прохождению техосмотра. Проверим и при необходимости отрегулируем поток света ваших фар"
             ></Card>
             <Card
               imageSRC={imagePolishingCard4}
@@ -112,15 +112,10 @@ const HeadlightPolishing = () => {
               className="max-w-[310px]"
               title=" Подберем оптимальные фары для Вашего автомобиля и выполним замену. Сотрудничаем с ведущими мировыми производителями"
             >
-              <Headlight className="h-40 w-40 fill-white" />
+              <Headlight className="h-38 w-38 fill-white" />
             </IconCard>
           </ul>
         </section>
-        <div className="mt-10 w-full">
-          <h3>
-            Работаем с ведущими мировыми производителями автомобильных стекол
-          </h3>
-        </div>
         <section className="bg-brand-body mb-15 flex flex-col pt-0.5 md:mb-30">
           <h2 className="self-start">Зачем нужна полировка</h2>
           <MotionString array={polishingFeatures} />

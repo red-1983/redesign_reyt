@@ -18,18 +18,24 @@ import {
   imageConditionerCard4,
 } from "@/data/image-sets";
 import {
+  Finance,
+  Equipment,
+  Drum,
+  Wind,
+  Power,
+  Droplets,
   serviceCar,
   Worker,
   Consultation,
   EEClogo,
-  QualityMedal,
+  Quality,
   Car2,
   Bus,
   Tractor,
   Truck,
 } from "@/assets";
 import Image from "next/image";
-import { polishingFeatures } from "@/data/polishingFeatures";
+import { maintenanceConditioner } from "@/data/maintenanceConditioner";
 export const metadata: Metadata = {
   title: "Профессиональная заправка и обслуживание автокондиционеров | Reyt.by",
   description:
@@ -58,8 +64,8 @@ const RefulingConditioner = () => {
           <Popap className="flex sm:hidden">
             <FormContact />
           </Popap>
-          <h2 className="self-start">Предлагаем</h2>
-          <p>
+          <h2 className="self-start">Система кондиционирования автомобиля</h2>
+          <p className="text-fontSize-18-24 text-justify">
             Комфортная температура в салоне автомобиля — это не роскошь, а
             необходимость, особенно в жаркое летнее время. Система
             кондиционирования не только охлаждает воздух, но и очищает его от
@@ -70,6 +76,8 @@ const RefulingConditioner = () => {
             заправке и диагностике автомобильных кондиционеров, чтобы вы всегда
             наслаждались прохладой в пути.
           </p>
+          <h2 className="self-start">Предлагаем</h2>
+
           <p>
             Мы предоставляем полный комплекс услуг для поддержания идеального
             климата в вашем автомобиле.
@@ -110,27 +118,22 @@ const RefulingConditioner = () => {
               className="max-w-[310px]"
               title="Современное оборудование. Мы используем автоматические станции для заправки кондиционеров, которые гарантируют высокую точность и соблюдение всех технологических норм."
             >
-              <EEClogo className="h-38 w-70" />
+              <Equipment className="h-38 w-38" />
             </IconCard>
             <IconCard
               className="max-w-[310px]"
               title=" Прозрачные цены. Вы всегда знаете, за что платите. Мы озвучиваем стоимость работ до их начала, без скрытых платежей и наценок."
             >
-              <Consultation className="h-38 w-38" />
+              <Finance className="h-38 w-38" />
             </IconCard>
             <IconCard
               className="max-w-[310px]"
               title=" Гарантия на выполненные работы. Мы уверены в качестве наших услуг и предоставляем гарантию на заправку и все сопутствующие работы."
             >
-              <QualityMedal className="h-38 w-38 fill-white" />
+              <Quality className="h-38 w-38 fill-white" />
             </IconCard>
           </ul>
         </section>
-        <div className="mt-10 w-full">
-          <h3>
-            Работаем с ведущими мировыми производителями автомобильных стекол
-          </h3>
-        </div>
       </div>
       <section className="bg-brand-footer xs:px-0 flex flex-col items-center px-2 pb-30">
         <h2 className="text-center">
@@ -138,29 +141,35 @@ const RefulingConditioner = () => {
         </h2>
         <ul className="xs:flex-row xs:gap-5 xs:items-start flex w-full max-w-[1350px] flex-col flex-wrap items-center justify-center gap-10 md:justify-around 2xl:justify-between">
           <IconCard title="Слабое охлаждение: Воздух из дефлекторов стал заметно теплее, чем раньше. ">
-            <Car2 className="h-38 w-38 fill-white transition-all duration-300 ease-in-out group-hover:fill-[yellow] group-hover:drop-shadow-[0_5px_15px_rgba(255,255,0,0.4)] group-active:fill-[yellow]" />
+            <Wind className="h-30 w-30" />
           </IconCard>
           <IconCard title="Кондиционер не включается: Компрессор может не запускаться из-за недостаточного давления в системе.">
-            <Bus className="h-30 w-30 fill-white text-[green] group-hover:[&>.list-item-1]:fill-current group-active:[&>.list-item-1]:fill-current group-hover:[&>.list-item-2]:fill-current group-hover:[&>.list-item-2]:delay-100 group-active:[&>.list-item-2]:fill-current group-active:[&>.list-item-2]:delay-100 group-hover:[&>.list-item-3]:fill-current group-hover:[&>.list-item-3]:delay-300 group-active:[&>.list-item-3]:fill-current group-active:[&>.list-item-3]:delay-300 group-hover:[&>.list-item-4]:fill-current group-hover:[&>.list-item-4]:delay-500 group-active:[&>.list-item-4]:fill-current group-active:[&>.list-item-4]:delay-500 [&>g]:transition-all [&>g]:duration-200" />
+            <Power className="h-30 w-30" />
           </IconCard>
           <IconCard title="Посторонние шумы: Шипение или гул при работе кондиционера могут говорить об утечках.">
-            <Truck className="group-hover:[&>.shield]:stroke-brand-components group-active:[&>.shield]:stroke-brand-components h-30 w-30 group-hover:[&>.check]:fill-[green] group-active:[&>.check]:fill-[green] [&>.shield]:origin-center [&>.shield]:fill-none [&>.shield]:stroke-white [&>.shield]:transition-transform [&>.shield]:duration-1000 group-hover:[&>.shield]:rotate-y-[360deg]" />
+            <Drum className="h-30 w-30" />
           </IconCard>
           <IconCard title="Запотевание стекол: Если система не справляется с осушением воздуха, окна в салоне начинают запотевать.">
-            <Tractor className="h-30 w-30 fill-white" />
+            <Droplets className="h-30 w-30" />
           </IconCard>
         </ul>
       </section>
-      <section className="bg-brand-body mb-15 flex flex-col pt-0.5 md:mb-30">
-        <h2 className="self-start">Как часто нужно заправлять кондиционер</h2>
-        <MotionString array={polishingFeatures} />
-        <p>
-          Даже в полностью исправной системе происходит естественная утечка
-          фреона — до 10-15% в год. Поэтому производители рекомендуют проводить
-          диагностику и дозаправку кондиционера: Для автомобилей младше 5 лет —
-          каждые 2-3 года. Для автомобилей старше 5 лет — каждый год.
-        </p>
-      </section>
+      <div className="bg-brand-body mx-auto w-full max-w-[1350px]">
+        <section className="mb-15 flex flex-col pt-0.5">
+          <h2 className="self-start">Как часто нужно заправлять кондиционер</h2>
+          <p className="text-fontSize-18-24 text-justify">
+            Даже в полностью исправной системе происходит естественная утечка
+            фреона — до 10-15% в год. Поэтому производители рекомендуют
+            проводить диагностику и дозаправку кондиционера: Для автомобилей
+            младше 5 лет — каждые 2-3 года. Для автомобилей старше 5 лет —
+            каждый год.
+          </p>
+        </section>
+        <section className="mb-15 flex flex-col pt-0.5 md:mb-30">
+          <h2 className="self-start">Мнение эксперта</h2>
+          <MotionString array={maintenanceConditioner} />
+        </section>
+      </div>
     </>
   );
 };
