@@ -20,7 +20,7 @@ export const MarqueeItem = ({
     <Link
       href={href}
       className={cn(
-        "mr-15 flex items-center justify-center rounded-md",
+        "mr-5 flex items-center justify-center rounded-md sm:mr-15",
         className
       )}
       target="_blank"
