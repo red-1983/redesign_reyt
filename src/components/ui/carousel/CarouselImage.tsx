@@ -1,13 +1,18 @@
 "use client";
 import React from "react";
-import Image from "next/image";
-import { carouselImage1, carouselImage2, carouselImage3 } from "@/assets";
+import Image, { type StaticImageData } from "next/image";
 
 import { cn } from "@/lib/utils";
 
+interface CarouselDataType {
+  id: number;
+  image: StaticImageData;
+  alt: string;
+}
 interface CarouselImageProps extends React.ComponentProps<"div"> {
   children?: React.ReactNode;
   className?: string;
+  arryImage: CarouselDataType[];
 }
 import {
   Carousel,
@@ -20,25 +25,9 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 export const CarouselImage = ({
   children,
   className,
+  arryImage,
   ...props
 }: CarouselImageProps) => {
-  const arryImage = [
-    {
-      id: 1,
-      image: carouselImage1,
-      alt: "Пример работы 1",
-    },
-    {
-      id: 2,
-      image: carouselImage2,
-      alt: "Пример работы 2",
-    },
-    {
-      id: 3,
-      image: carouselImage3,
-      alt: "Пример работы 3",
-    },
-  ];
   const isMobile = useMediaQuery("(max-width: 640px)");
   return (
     <Carousel className={cn("w-full", className)} {...props}>

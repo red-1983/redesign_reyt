@@ -40,6 +40,8 @@ export { default as homeCardChippedDesktop } from "./img/services/homeCardChippe
 export { default as carouselImage1 } from "./img/carousel/carouselImage1.webp";
 export { default as carouselImage2 } from "./img/carousel/carouselImage2.webp";
 export { default as carouselImage3 } from "./img/carousel/carouselImage3.webp";
+export { default as carouselImageHeadlight2 } from "./img/carousel/carouselImageHeadlight2.webp";
+export { default as carouselImageHeadlight3 } from "./img/carousel/carouselImageHeadlight3.webp";
 export { default as imgForm } from "./img/imageForm.webp";
 export { default as serviceCar } from "./img/glass-replacement/serviceCar.webp";
 export { default as homeSectionMainDesktop } from "./img/homeSectionMainDesktop.webp";

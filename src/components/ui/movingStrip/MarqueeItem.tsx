@@ -31,7 +31,7 @@ export const MarqueeItem = ({
         alt={alt}
         loading="lazy"
         width={200}
-        height={100}
+        height={80}
         className={cn("object-contain", imageClassName)}
       />
     </Link>

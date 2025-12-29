@@ -7,6 +7,7 @@ import {
   imageHomeCardChipped,
   imageHomeCardConditioner,
 } from "@/data/image-sets";
+import { caruselImages } from "@/data/caruselImages";
 import {
   imgForm,
   Car,
@@ -163,7 +164,10 @@ export default function Home() {
       </section>
       <section className="mx-auto flex w-full max-w-[1350px] flex-col items-center gap-10 px-4 pb-5 md:gap-15 md:pb-30">
         <h2 className="self-start">Портфолио</h2>
-        <CarouselImage className="xmd:max-w-[80%] max-w-[95%] md:max-w-[60%]" />
+        <CarouselImage
+          arryImage={caruselImages}
+          className="xmd:max-w-[80%] max-w-[95%] md:max-w-[60%]"
+        />
         <LinkService href="/portfolio">Подробнее</LinkService>
       </section>
       <section className="bg-brand-footer mx-auto w-full px-4 pt-15 pb-10 md:pt-30 md:pb-15 2xl:px-0">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Geo } from "@/assets";
+import { Geo, IconInstagram } from "@/assets";
 import clsx from "clsx";
 import Link from "next/link";
 import {
@@ -36,9 +36,13 @@ export const SectionHeader = ({
       </Link>
       <BlockWorkTime className="hidden lg:flex" />
       <BlockTelephone className="hidden w-[max-content] gap-1.5 md:flex md:flex-col" />
-      <PopoverCallback>
-        <FormCallback />
-      </PopoverCallback>
+      <Link
+        href="https://www.instagram.com/avtoglass_mozyr/?igshid=17fiuxybtx69m "
+        className="hidden items-center gap-2 md:flex"
+      >
+        <IconInstagram className="fill-brand-components size-6" />
+        avtoglass_mozyr
+      </Link>
     </div>
   );
 };

@@ -2,13 +2,25 @@
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
 const Marquee = dynamic(() => import("react-fast-marquee"), { ssr: false });
+import type { StaticImageData } from "next/image";
 import { MarqueeItem } from "./MarqueeItem";
-import { marqueeGlassReplacement } from "@/data/marqueeGlassReplacement";
 
-export const MovingStrip = () => {
+interface MarqueeDataType {
+  href: string;
+  src: string | StaticImageData;
+  alt: string;
+  className?: string;
+  imageClassName?: string;
+}
+
+interface MovingStripProps {
+  items: MarqueeDataType[];
+}
+
+export const MovingStrip = ({ items }: MovingStripProps) => {
   const marqueeItems = useMemo(
     () =>
-      marqueeGlassReplacement.map((item, index) => (
+      items.map((item, index) => (
         <MarqueeItem
           key={index}
           href={item.href}
@@ -18,7 +30,7 @@ export const MovingStrip = () => {
           imageClassName={item.imageClassName}
         />
       )),
-    []
+    [items]
   );
 
   return (

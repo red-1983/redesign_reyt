@@ -8,6 +8,7 @@ import {
   IconCard,
   CarouselImage,
   LinkService,
+  MovingStrip,
   MotionString,
 } from "@/components/ui";
 import {
@@ -17,6 +18,8 @@ import {
   imagePolishingCard3,
   imagePolishingCard4,
 } from "@/data/image-sets";
+import { marqueeHeadlight } from "@/data/marqueeHeadlight";
+import { caruselImagesHeadlight } from "@/data/caruselImagesHeadlight";
 import {
   Wrench,
   Polishing,
@@ -87,7 +90,7 @@ const HeadlightPolishing = () => {
             ></Card>
           </ul>
         </section>
-        <section className="bg-brand-body mb-15 pt-0.5 md:mb-30">
+        <section className="bg-brand-body pt-0.5">
           <h2 className="">Наши преимущества</h2>
           <ul className="xs:flex-row xs:gap-5 xs:items-start flex w-full max-w-[1350px] flex-col flex-wrap items-center justify-center gap-10 md:justify-around 2xl:justify-between">
             <IconCard
@@ -115,6 +118,12 @@ const HeadlightPolishing = () => {
               <Headlight className="h-38 w-38 fill-white" />
             </IconCard>
           </ul>
+          <div className="mt-15 flex min-h-[100px] w-full flex-col gap-5 sm:min-h-[200px] md:mt-30 md:gap-10 lg:min-h-[300px]">
+            <h3>
+              Работаем с ведущими мировыми производителями автомобильных фар
+            </h3>
+            <MovingStrip items={marqueeHeadlight} />
+          </div>
         </section>
         <section className="bg-brand-body mb-15 flex flex-col pt-0.5 md:mb-30">
           <h2 className="self-start">Зачем нужна полировка</h2>
@@ -142,7 +151,10 @@ const HeadlightPolishing = () => {
       </section>
       <section className="mx-auto flex w-full max-w-[1350px] flex-col items-center gap-10 px-4 pb-5 md:gap-15 md:pb-30">
         <h2 className="self-start">Наши работы</h2>
-        <CarouselImage className="xmd:max-w-[80%] max-w-[95%] md:max-w-[60%]" />
+        <CarouselImage
+          arryImage={caruselImagesHeadlight}
+          className="xmd:max-w-[80%] max-w-[95%] md:max-w-[60%]"
+        />
         <LinkService href="/portfolio">Подробнее</LinkService>
       </section>
     </>

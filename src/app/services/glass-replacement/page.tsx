@@ -29,6 +29,7 @@ import {
 } from "@/assets";
 import Image from "next/image";
 import { serviceFeatures } from "@/data/serviceFeatures";
+import { marqueeGlassReplacement } from "@/data/marqueeGlassReplacement";
 export const metadata: Metadata = {
   title: "Замена автомобильных стекол в Мозыре | Reyt.by",
   description:
@@ -56,7 +57,7 @@ const GlassReplacement = () => {
         </Popap>
       </SectionMain>
       <Breadcrumbs className="mx-auto flex w-full max-w-[1350px] [&_[data-slot=breadcrumb-list]]:text-[#bebebe]" />
-      <div className="mx-auto max-w-[1350px] px-4">
+      <div className="mx-auto max-w-[1350px] px-4 pb-10 md:pb-15">
         <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0">
           <Popap className="flex sm:hidden">
             <FormContact />
@@ -114,11 +115,11 @@ const GlassReplacement = () => {
             </IconCard>
           </ul>
         </section>
-        <div className="relative mt-10 min-h-[300px] w-full">
+        <div className="flex min-h-[100px] w-full flex-col gap-5 sm:min-h-[200px] md:gap-10 lg:min-h-[300px]">
           <h3>
             Работаем с ведущими мировыми производителями автомобильных стекол
           </h3>
-          <MovingStrip />
+          <MovingStrip items={marqueeGlassReplacement} />
         </div>
       </div>
       <section className="bg-brand-footer xs:px-0 flex flex-col items-center px-2 pb-30">
