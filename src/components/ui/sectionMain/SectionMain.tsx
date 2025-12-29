@@ -49,7 +49,7 @@ export const SectionMain = ({
             quality={100}
             style={{ objectFit: "cover" }}
             placeholder="blur"
-            priority
+            loading="lazy"
           />
         </picture>
       ) : (
@@ -62,7 +62,7 @@ export const SectionMain = ({
           style={{ objectFit: "cover" }}
           placeholder="blur"
           className="z-0"
-          priority
+          loading="lazy"
         />
       )}
 

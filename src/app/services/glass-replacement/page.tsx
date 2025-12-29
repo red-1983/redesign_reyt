@@ -114,15 +114,11 @@ const GlassReplacement = () => {
             </IconCard>
           </ul>
         </section>
-        <div className="mt-10 w-full">
+        <div className="relative mt-10 min-h-[300px] w-full">
           <h3>
             Работаем с ведущими мировыми производителями автомобильных стекол
           </h3>
-          <p>
-            {" "}
-            Работаем с КАСКО и другими страховыми случаями. Выезжаем к клиенту
-            на дом.
-          </p>
+          <MovingStrip />
         </div>
       </div>
       <section className="bg-brand-footer xs:px-0 flex flex-col items-center px-2 pb-30">
