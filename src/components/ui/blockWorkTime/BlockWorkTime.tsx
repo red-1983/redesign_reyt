@@ -12,9 +12,9 @@ export const BlockWorkTime = ({ className, ...props }: BlockWorkTimeProps) => {
     >
       <li className="flex items-center gap-2">
         <Cloak className="fill-[#FC3532]" />
-        <span>Вт - Пт: 8:00 - 17:00</span>
+        <span>Вт - Пт: 9:00 - 18:00</span>
       </li>
-      <li className="pl-6">Cб: 8:00 - 16:00</li>
+      <li className="pl-6">Cб: 9:00 - 17:00</li>
       <li className="pl-6">Вс-Пн: Выходной</li>
     </ul>
   );

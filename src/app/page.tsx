@@ -1,5 +1,6 @@
 import Image from "next/image";
 import imageSectionAbout from "@/assets/img/imageSectionAbout.webp";
+import imageSectionCooperation from "@/assets/img/imageSectionCooperation.webp";
 import {
   responsiveSectionMainImages,
   imageHomeCardReplacement,
@@ -8,16 +9,8 @@ import {
   imageHomeCardConditioner,
 } from "@/data/image-sets";
 import { caruselImages } from "@/data/caruselImages";
-import {
-  imgForm,
-  Car,
-  CarRepair,
-  CarSecurity,
-  List,
-  Quality,
-  certificate,
-  certificate1,
-} from "@/assets";
+import { cooperation } from "@/data/cooperation";
+import { imgForm, Car, CarRepair, CarSecurity, List, Quality } from "@/assets";
 import {
   LinkService,
   IconCard,
@@ -29,6 +22,7 @@ import {
   Popap,
   Breadcrumbs,
   Card,
+  MotionString,
 } from "@/components/ui";
 
 export default function Home() {
@@ -189,29 +183,21 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-brand-body flex w-full justify-center pb-20 md:pb-30">
-        <div className="max-w-[1350px] px-4 xl:px-0">
-          <h2 className="md:30 mb-20">отзывы наших клиентов</h2>{" "}
-          <CaruselReviews />
-        </div>
-      </section>
-      <section className="bg-brand-body flex w-full justify-center pb-20 md:pb-30">
-        <div className="w-full max-w-[1350px] px-4 xl:px-0">
-          <h2 className="md:30 mb-20">Наши сертификаты и свидетельства</h2>
-          <div className="flex w-full flex-wrap justify-around gap-10">
-            <div className="relative aspect-[500/770] w-[47%] max-w-[400px] overflow-hidden rounded-md">
+      <section className="mx-auto flex w-full max-w-[1350px] flex-col items-start gap-10">
+        <div className="flex h-[min-content] flex-col items-center justify-between">
+          <h2 className="self-start">Сотрудничаем с организациями</h2>
+          <div className="flex h-[min-content] w-full items-center justify-between gap-[1%]">
+            <p className="w-full text-justify text-[clamp(1rem,2.5vw,1.5rem)] sm:w-[50%]">
+              Мы гордимся долгосрочными и надежными отношениями с нашими
+              партнерами. Нам доверяют ведущие страховые компании и сервисные
+              центры, что подтверждает высокое качество наших услуг и
+              профессионализм команды. Мы предлагаем специальные условия для
+              корпоративных клиентов и всегда открыты для нового сотрудничества.
+            </p>
+
+            <div className="relative hidden aspect-[630/420] w-[47%] max-w-[630px] sm:block">
               <Image
-                src={certificate}
-                alt="Фоновое изображение "
-                fill
-                sizes="100vw"
-                style={{ objectFit: "cover" }}
-                placeholder="blur"
-              />
-            </div>
-            <div className="relative aspect-[500/770] w-[47%] max-w-[400px] overflow-hidden rounded-md">
-              <Image
-                src={certificate1}
+                src={imageSectionCooperation}
                 alt="Фоновое изображение "
                 fill
                 sizes="100vw"
@@ -220,6 +206,14 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+        <h3 className="text-fontSize-18-24">Наши преимущества</h3>
+        <MotionString array={cooperation} />
+      </section>
+      <section className="bg-brand-body flex w-full justify-center pb-20 md:pb-30">
+        <div className="max-w-[1350px] px-4 xl:px-0">
+          <h2 className="md:30 mb-20">отзывы наших клиентов</h2>{" "}
+          <CaruselReviews />
         </div>
       </section>
     </>
