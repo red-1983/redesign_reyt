@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Geo, Tel, IconInstagram, Mail, MailBox } from "@/assets";
+import { Geo, Tel, IconInstagram, Mail } from "@/assets";
 import { cn } from "@/lib/utils";
 interface BlockContactProps extends React.ComponentProps<"ul"> {
   className?: string;
@@ -31,16 +31,6 @@ export const BlockContact = ({ className, ...props }: BlockContactProps) => {
         >
           <Geo className="fill-brand-components" /> Адрес: 1-ый переулок
           Малинина, 6 Б (Авторынок)
-        </Link>
-      </li>
-      <li className="hover:text-brand-components transition-all duration-500">
-        <Link
-          href="mailto: 247760, Гомельская область, г. Мозырь, ул. Иваненко А.С., д.14/1, комн.1"
-          className="flex items-center gap-2"
-        >
-          <MailBox className="stroke-brand-components size-6 self-start" />
-          247760, Гомельская область, г. Мозырь, ул. Иваненко А.С., д.14/1,
-          комн.1
         </Link>
       </li>
       <li className="hover:text-brand-components transition-all duration-500">

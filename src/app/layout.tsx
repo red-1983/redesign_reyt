@@ -7,6 +7,8 @@ import { Footer } from "@/components";
 import { cn } from "@/lib/utils";
 import { ButtonUp } from "@/components/ui";
 import { Toaster } from "@/components/ui/sonner";
+import { CookieConsent } from "@/components/ui/cookieConsent/CookieConsent";
+import { CookieProvider } from "@/context/CookieContext";
 const RobotoSans = Roboto({
   variable: "--font-roboto-sans",
   subsets: ["latin"],
@@ -33,16 +35,19 @@ export default function RootLayout({
       <body
         className={`${RobotoSans.variable} ${RobotoMono.variable} antialiased`}
       >
-        <div className="mx-auto grid min-h-screen max-w-[1920px] grid-rows-[min-content_1fr_min-content]">
-          <Header className="bg-brand-body mx-auto w-full text-white" />
-          <main className="text-brandText bg-brand-body relative">
-            <MainNavigation className="absolute z-20 w-full pt-4 text-black" />
-            {children}
-          </main>
-          <Footer />
-          <ButtonUp />
-        </div>
-        <Toaster position="top-center" />
+        <CookieProvider>
+          <div className="mx-auto grid min-h-screen max-w-[1920px] grid-rows-[min-content_1fr_min-content]">
+            <Header className="bg-brand-body mx-auto w-full text-white" />
+            <main className="text-brandText bg-brand-body relative">
+              <MainNavigation className="absolute z-20 w-full pt-4 text-black" />
+              {children}
+            </main>
+            <Footer />
+            <ButtonUp />
+          </div>
+          <CookieConsent />
+          <Toaster position="top-center" />
+        </CookieProvider>
       </body>
     </html>
   );
