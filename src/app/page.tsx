@@ -149,8 +149,8 @@ export default function Home() {
 герметичность 
 стекла: 
 12 месяцев - 
-для автомобилей
- до 2018"
+для авто
+ до 2018 года включительно и  24 месяца - для авто с 2019 года"
           >
             <Quality className="group-hover:[&>[data-name='path-3']]:fill-brand-components group-active:[&>[data-name='path-3']]:fill-brand-components h-30 w-30 transition-all duration-300 ease-in-out group-hover:drop-shadow-[0_15px_15px_rgba(255,255,0,0.4)] group-hover:[&>[data-name='path-6']]:fill-[green] group-active:[&>[data-name='path-6']]:fill-[green]" />
           </IconCard>

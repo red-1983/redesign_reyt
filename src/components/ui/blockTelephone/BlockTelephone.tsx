@@ -26,7 +26,7 @@ export const BlockTelephone = ({
       <li>
         <Link href="tel:8 029 2356-36-44" className="hover-link pl-6">
           {" "}
-          8 029 2356-36-44
+          8 029 236-36-44
         </Link>
       </li>
     </ul>

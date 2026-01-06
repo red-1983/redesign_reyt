@@ -44,8 +44,9 @@ export default function RootLayout({
             </main>
             <Footer />
             <ButtonUp />
+            <CookieConsent />
           </div>
-          <CookieConsent />
+
           <Toaster position="top-center" />
         </CookieProvider>
       </body>

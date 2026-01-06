@@ -1,57 +1,70 @@
 "use client";
 
+import { useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import { MyButton } from "@/components/ui";
 import { useCookieSettings } from "@/context/CookieContext";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogFooter,
-} from "@/components/ui/dialog";
 
 export const CookieConsent = () => {
   const router = useRouter();
   const pathname = usePathname();
   const { consentGiven, acceptAll, isInitialized } = useCookieSettings();
 
-  // Не показываем диалог, если: 1. Контекст не загружен, 2. Согласие дано, 3. Мы на странице настроек
-  if (consentGiven || !isInitialized || pathname === "/cookie") {
-    return null;
-  }
+  const shouldShow = isInitialized && !consentGiven && pathname !== "/cookie";
+
+  // Эффект для блокировки прокрутки фона
+  useEffect(() => {
+    if (shouldShow) {
+      document.body.style.overflow = "hidden";
+
+      return () => {
+        document.body.style.overflow = "unset";
+      };
+    }
+  }, [shouldShow]);
 
   const handleCustomize = () => {
     router.push("/cookie");
   };
 
+  // 4. Используем переменную для условного рендеринга в самом конце.
+  if (!shouldShow) {
+    return null;
+  }
+
   return (
-    // `open`={true} означает, что диалог будет открыт, пока компонент рендерится
-    // `onOpenChange` с `(open) => !open && acceptAll()` можно использовать,
-    // если нужно принять cookie при закрытии по крестику или клику вне диалога.
-    // Пока оставим явное принятие.
-    <Dialog open={true}>
-      <DialogContent showCloseButton={false} className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle>Наш сайт использует файлы cookie</DialogTitle>
-          <DialogDescription>
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cookie-dialog-title"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+    >
+      <div className="bg-background flex w-full max-w-lg flex-col gap-4 rounded-lg p-6 shadow-lg">
+        <div className="flex flex-col space-y-1.5 text-center sm:text-left">
+          <h3
+            id="cookie-dialog-title"
+            className="text-lg leading-none font-semibold tracking-tight"
+          >
+            Наш сайт использует файлы cookie
+          </h3>
+          <p className="text-muted-foreground text-sm">
             Мы используем файлы cookie, чтобы улучшить ваш опыт взаимодействия с
-            сайтом. Нажимая «Принять», вы соглашаетесь на использование всех
+            сайтом. Нажимая «Принять все», вы соглашаетесь на использование всех
             файлов cookie. Вы также можете настроить их самостоятельно.{" "}
             <Link href="/cookie" className="underline">
               Подробнее
             </Link>
-          </DialogDescription>
-        </DialogHeader>
-        <DialogFooter className="gap-15 sm:justify-start">
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-around gap-2">
           <MyButton
             onClick={acceptAll}
             variant="secondary"
             className="bg-brand-components h-[35px] w-[100px] text-[0.8rem]"
           >
-            Принять
+            Принять все
           </MyButton>
           <MyButton
             onClick={handleCustomize}
@@ -60,8 +73,8 @@ export const CookieConsent = () => {
           >
             Настроить
           </MyButton>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+        </div>
+      </div>
+    </div>
   );
 };
