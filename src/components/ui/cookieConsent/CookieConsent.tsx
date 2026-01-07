@@ -37,7 +37,7 @@ export const CookieConsent = () => {
       role="dialog"
       aria-modal="true"
       aria-labelledby="cookie-dialog-title"
-      className="fixed z-50 flex h-[100vh] w-[100vw] items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+      className="xmd:items-center xmd:pt-0 fixed z-50 flex h-[100%] w-[100vw] items-start justify-center bg-black/70 p-4 pt-25 backdrop-blur-sm"
     >
       <div className="bg-background flex w-full max-w-lg flex-col gap-4 rounded-lg p-6 shadow-lg">
         <div className="flex flex-col text-center sm:text-left">
