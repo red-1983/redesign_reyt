@@ -37,12 +37,12 @@ export const CookieConsent = () => {
       role="dialog"
       aria-modal="true"
       aria-labelledby="cookie-dialog-title"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+      className="fixed z-50 flex h-[100vh] w-[100vw] items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
     >
       <div className="bg-background flex w-full max-w-lg flex-col gap-4 rounded-lg p-6 shadow-lg">
-        <div className="flex flex-col space-y-1.5 text-center sm:text-left">
+        <div className="flex flex-col text-center sm:text-left">
           <h3
-            id="cookie-dialog-title"
+            // id="cookie-dialog-title"
             className="text-lg leading-none font-semibold tracking-tight"
           >
             Наш сайт использует файлы cookie
