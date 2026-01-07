@@ -28,7 +28,6 @@ export const CookieConsent = () => {
     router.push("/cookie");
   };
 
-  // 4. Используем переменную для условного рендеринга в самом конце.
   if (!shouldShow) {
     return null;
   }
@@ -62,14 +61,14 @@ export const CookieConsent = () => {
           <MyButton
             onClick={acceptAll}
             variant="secondary"
-            className="bg-brand-components h-[35px] w-[100px] text-[0.8rem]"
+            className="bg-brand-components h-[35px] px-4 text-[0.8rem]"
           >
             Принять все
           </MyButton>
           <MyButton
             onClick={handleCustomize}
             variant="secondary"
-            className="h-[35px] w-[100px] bg-[#000]/70 text-[0.8rem]"
+            className="h-[35px] bg-[#000]/70 px-4 text-[0.8rem]"
           >
             Настроить
           </MyButton>
