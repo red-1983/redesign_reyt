@@ -27,6 +27,7 @@ export { Power } from "./icon/refuelingConditioner/Power";
 export { Droplets } from "./icon/refuelingConditioner/Droplets";
 export { Mail } from "./icon/Mail";
 export { MailBox } from "./icon/MailBox";
+export { default as logo } from "./icon/logo.svg";
 export { default as homeCardReplacementDesktop } from "./img/services/homeCardReplacementDesktop.webp";
 export { default as homeCardReplacementMobile } from "./img/services/homeCardReplacementMobile.webp";
 export { default as homeCardReplacementTablet } from "./img/services/homeCardReplacementTablet.webp";

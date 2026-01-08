@@ -183,7 +183,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mx-auto flex w-full max-w-[1350px] flex-col items-start gap-10">
+      <section className="mx-auto flex w-full max-w-[1350px] flex-col items-start gap-10 px-4">
         <div className="flex h-[min-content] flex-col items-center justify-between">
           <h2 className="self-start">Сотрудничаем с организациями</h2>
           <div className="flex h-[min-content] w-full items-center justify-between gap-[1%]">

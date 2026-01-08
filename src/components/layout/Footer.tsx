@@ -14,13 +14,13 @@ const Footer = () => {
       <div className="mx-auto flex w-full max-w-[1350px] flex-col">
         <div className="mb-20 flex flex-col-reverse items-center justify-around gap-10 lg:flex-row lg:gap-5 2xl:justify-between">
           <div className="flex w-full flex-row flex-wrap justify-center gap-5 lg:max-w-[50%] lg:flex-col">
-            <div className="mb-4 flex w-full max-w-[350px] flex-col items-center gap-4 sm:items-start lg:max-w-full">
+            <div className="xmd:px-0 mb-4 flex w-full max-w-[350px] flex-col items-center gap-4 px-4 sm:items-start lg:max-w-full">
               <h3 className="text-[clamp(1rem,2.5vw,1.4rem)] uppercase">
                 Контакты
               </h3>
               <BlockContact className="text-fontSize-18-20 flex w-full flex-col gap-3 sm:items-start" />
             </div>
-            <div className="flex w-[350px] flex-col items-center justify-start gap-4 sm:w-[250px] sm:items-start lg:justify-between">
+            <div className="xmd:px-0 flex w-[350px] flex-col items-center justify-start gap-4 px-4 sm:w-[250px] sm:items-start lg:justify-between">
               <h3 className="text-[clamp(1rem,2.5vw,1.4rem)] uppercase">
                 Время работы
               </h3>
