@@ -26,7 +26,7 @@ export const SectionMain = ({
   return (
     <section
       className={cn(
-        "relative flex aspect-[1920/820] justify-center px-5 sm:pb-10 md:mb-5 md:items-start md:pt-15 lg:px-4 xl:px-0 xl:pt-20",
+        "relative flex aspect-[1920/820] justify-center px-5 sm:pb-10 md:mb-5 md:items-start md:pt-15 lg:px-4 xl:pt-20",
         className
       )}
     >

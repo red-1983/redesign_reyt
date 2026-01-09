@@ -39,6 +39,7 @@ const GlassReplacement = () => {
   return (
     <>
       <SectionMain
+        className="xmd:[&_[data-slot=main-text]]:w-[70%] [&_[data-slot=main-text]]:w-[80%] lg:[&_[data-slot=text]]:mt-10 xl:[&_[data-slot=text]]:mt-20"
         h1="Aвтостекло Мозырь, замена автостекол, замена автостекла с выездом, быстро, качественно, недорого  - reyt.by"
         imageSRC={replacementSectionMainImages}
         imageALT="Фоновое изображение навигационной секции"
@@ -128,7 +129,7 @@ const GlassReplacement = () => {
         </h2>
         <ul className="xs:flex-row xs:gap-5 xs:items-start flex w-full max-w-[1350px] flex-col flex-wrap items-center justify-center gap-10 md:justify-around 2xl:justify-between">
           <IconCard title="Замена стекол легкового автомобиля ">
-            <Car2 className="h-38 w-38 fill-white transition-all duration-300 ease-in-out group-hover:fill-[yellow] group-hover:drop-shadow-[0_5px_15px_rgba(255,255,0,0.4)] group-active:fill-[yellow]" />
+            <Car2 className="h-38 w-38 fill-white transition-all duration-300 ease-in-out" />
           </IconCard>
           <IconCard title="Замена стекол автобуса и микроавтобуса">
             <Bus className="h-30 w-30 fill-white text-[green] group-hover:[&>.list-item-1]:fill-current group-active:[&>.list-item-1]:fill-current group-hover:[&>.list-item-2]:fill-current group-hover:[&>.list-item-2]:delay-100 group-active:[&>.list-item-2]:fill-current group-active:[&>.list-item-2]:delay-100 group-hover:[&>.list-item-3]:fill-current group-hover:[&>.list-item-3]:delay-300 group-active:[&>.list-item-3]:fill-current group-active:[&>.list-item-3]:delay-300 group-hover:[&>.list-item-4]:fill-current group-hover:[&>.list-item-4]:delay-500 group-active:[&>.list-item-4]:fill-current group-active:[&>.list-item-4]:delay-500 [&>g]:transition-all [&>g]:duration-200" />

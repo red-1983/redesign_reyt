@@ -29,6 +29,7 @@ export default function Home() {
   return (
     <>
       <SectionMain
+        className="lg:[&_[data-slot=text]]:mt-10 xl:[&_[data-slot=text]]:mt-20"
         h1="Aвтостекла Мозырь, замена автостекол, установка автостекол, ремонт
           трещин автостекла, полировка фар, заправка автокондиционера - reyt.by"
         imageSRC={responsiveSectionMainImages}
