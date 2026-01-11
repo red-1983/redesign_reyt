@@ -72,12 +72,20 @@ const Footer = () => {
               <Link
                 href="/docs/certificateOfConformity.pdf"
                 download
-                target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-components hover:text-brand-components/80 uppercase"
                 aria-label="Скачать сертификат соответствия"
               >
                 сертификат соответствия
+              </Link>
+              <Link
+                href="/docs/privacy_policy.pdf"
+                download
+                rel="noopener noreferrer"
+                className="text-brand-components hover:text-brand-components/80 uppercase"
+                aria-label="Скачать политику конфиденциальности"
+              >
+                политика конфиденциальности
               </Link>
             </p>
             <p className="mt-5">

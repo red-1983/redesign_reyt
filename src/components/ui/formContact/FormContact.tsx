@@ -168,10 +168,9 @@ export const FormContact = ({ onSuccess }: FormContactProps) => {
                     Я даю согласие на обработку персональных данных и соглашаюсь
                     с{" "}
                     <a
-                      href="/docs/politica.pdf"
+                      href="/docs/privacy_policy.pdf"
                       download
                       onClick={handlePolicyDowload}
-                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-brand-components hover:text-brand-components/80 underline"
                       aria-label="Скачать политику конфиденциальности"

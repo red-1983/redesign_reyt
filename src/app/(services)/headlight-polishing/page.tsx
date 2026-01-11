@@ -24,8 +24,6 @@ import {
   Wrench,
   Polishing,
   Headlight,
-  Consultation,
-  EEClogo,
   QualityMedal,
   Car2,
   Bus,
@@ -34,10 +32,51 @@ import {
 } from "@/assets";
 
 import { polishingFeatures } from "@/data/polishingFeatures";
+import { organizationSchema } from "@/config/schema";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Полировка фар в Мозыре",
+  name: "Профессиональная полировка и востановление фар в Мозыре",
+  description:
+    "Профессиональная полировка фар в Мозыре, быстро, качественно, недорого.",
+  url: "https://reyt.by/headlight-polishing",
+  provider: {
+    "@type": "AutoRepair",
+    name: "РеутБай",
+    url: "https://reyt.by/",
+  },
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Главная",
+      item: "https://reyt.by/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Полировка фар",
+      item: "https://reyt.by/headlight-polishing",
+    },
+  ],
+};
 export const metadata: Metadata = {
   title: "Полировка фар в Мозыре | Reyt.by",
   description:
     "Полировка фар в Мозыре, быстро, качественно, недорого. Восстановление фар, восстановление прозрачности пластика фары, продажа фар  - reyt.by",
+  other: {
+    "application/ld+json": JSON.stringify([
+      organizationSchema,
+      serviceSchema,
+      breadcrumbSchema,
+    ]),
+  },
 };
 
 const HeadlightPolishing = () => {

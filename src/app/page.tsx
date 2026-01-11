@@ -24,7 +24,32 @@ import {
   Card,
   MotionString,
 } from "@/components/ui";
+import type { Metadata } from "next";
+import { organizationSchema } from "@/config/schema";
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Главная",
+      item: "https://reyt.by/",
+    },
+  ],
+};
+export const metadata: Metadata = {
+  title: "Автомастерская в Мозыре | Reyt.by",
+  description:
+    "Автостекла в Мозыре, замена стекла, ремонт сколов и трещин. Заправка автокондиционера. Полировка фар. - reyt.by",
+  other: {
+    "application/ld+json": JSON.stringify([
+      organizationSchema,
+      breadcrumbSchema,
+    ]),
+  },
+};
 export default function Home() {
   return (
     <>

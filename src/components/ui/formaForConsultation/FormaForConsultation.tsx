@@ -112,7 +112,7 @@ export const FormaForConsultation = () => {
                       Я даю согласие на обработку персональных данных и
                       соглашаюсь с{" "}
                       <a
-                        href="/docs/politica.pdf"
+                        href="/docs/privacy_policy.pdf"
                         download
                         onClick={handlePolicyDowload}
                         target="_blank"

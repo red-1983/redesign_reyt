@@ -16,10 +16,10 @@ const LABELS: Record<string, string> = {
   "/portfolio": "Наши работы",
   "/contacts": "Контакты",
   "/services": "Услуги",
-  "/services/chip-repair": "Ремонт сколов",
-  "/services/glass-replacement": "Замена стекла",
-  "/services/headlight-polishing": "Полировка фар",
-  "/services/refueling-conditioner": "Заправка кондиционера",
+  "/chip-repair": "Ремонт сколов",
+  "/glass-replacement": "Замена стекла",
+  "/headlight-polishing": "Полировка фар",
+  "/refueling-conditioner": "Заправка кондиционера",
 };
 
 interface BreadcrumbsProps {

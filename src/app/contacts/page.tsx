@@ -5,11 +5,51 @@ import { FormContact, CopyButton, BlockTelephone } from "@/components/ui";
 import Link from "next/link";
 import { Geo, IconInstagram } from "@/assets";
 import { Mail } from "lucide-react";
+import { organizationSchema } from "@/config/schema";
+
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Наши контакты в Мозыре",
+  description:
+    "Контактная информация автосервиса 'РеутБай' в Мозыре: адрес, телефоны, email, время работы и карта проезда.",
+  url: "https://reyt.by/contacts",
+  provider: {
+    "@type": "AutoRepair",
+    name: "РеутБай",
+    url: "https://reyt.by/",
+  },
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Главная",
+      item: "https://reyt.by/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Контакты, как проехать, как с нами связаться",
+      item: "https://reyt.by/contacts",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Контакты | Reyt.by",
   description:
     "Автостекла в Мозыре, контакты, как проехать, как с нами связаться - reyt.by",
+  other: {
+    "application/ld+json": JSON.stringify([
+      organizationSchema,
+      contactPageSchema,
+      breadcrumbSchema,
+    ]),
+  },
 };
 function Contacts() {
   const coordinates = "52.038667, 29.192";

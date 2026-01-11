@@ -6,22 +6,22 @@ export type NavItem = {
 const servicesComponents: NavItem[] = [
   {
     title: "Замена стекла",
-    href: "/services/glass-replacement",
+    href: "glass-replacement",
     description: "Профессиональная замена лобовых, боковых и задних стекол.",
   },
   {
     title: "Ремонт сколов и трещин",
-    href: "/services/chip-repair",
+    href: "/chip-repair",
     description: "Восстановление стекол после повреждений.",
   },
   {
     title: "Полировка фар",
-    href: "/services/headlight-polishing",
+    href: "/headlight-polishing",
     description: "Возвращаем фарам прозрачность и яркость.",
   },
   {
     title: "Заправка кондиционера автомобиля",
-    href: "/services/refueling-conditioner",
+    href: "/refueling-conditioner",
     description: "Заправка кондиционера автомобиля.",
   },
 ];

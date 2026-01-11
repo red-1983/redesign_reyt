@@ -6,8 +6,6 @@ import {
   FormContact,
   Card,
   IconCard,
-  CarouselImage,
-  LinkService,
   MotionString,
 } from "@/components/ui";
 import {
@@ -24,22 +22,60 @@ import {
   Wind,
   Power,
   Droplets,
-  serviceCar,
   Worker,
-  Consultation,
-  EEClogo,
   Quality,
-  Car2,
-  Bus,
-  Tractor,
-  Truck,
 } from "@/assets";
-import Image from "next/image";
+
+import { organizationSchema } from "@/config/schema";
+
 import { maintenanceConditioner } from "@/data/maintenanceConditioner";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Заправка и обслуживание автокондиционеров",
+  name: "Профессиональная заправка и обслуживание автокондиционеров в Мозыре",
+  description:
+    "Профессиональная заправка и обслуживание автокондиционеров в Мозыре, быстро, качественно, недорого.",
+  url: "https://reyt.by/services/refueling-conditioner", // URL для самой услуги
+  provider: {
+    "@type": "AutoRepair",
+    name: "РеутБай",
+    url: "https://reyt.by/",
+  },
+};
+
+// 2. Схема для "хлебных крошек"
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Главная",
+      item: "https://reyt.by/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Заправка и обслуживание автокондиционеров",
+      item: "https://reyt.by/services/refueling-conditioner",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "Профессиональная заправка и обслуживание автокондиционеров | Reyt.by",
   description:
     " Профессиональная заправка и обслуживание автокондиционеров в Мозыре, быстро, качественно, недорого.   - reyt.by",
+  other: {
+    "application/ld+json": JSON.stringify([
+      organizationSchema,
+      serviceSchema,
+      breadcrumbSchema,
+    ]),
+  },
 };
 
 const RefulingConditioner = () => {

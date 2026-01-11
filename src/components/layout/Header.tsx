@@ -22,10 +22,10 @@ const Header = ({ className }: HeaderProps) => {
         <Link
           aria-label="logo"
           href="/"
-          className="flex h-[100px] w-[100px] items-center justify-center md:h-[min-content] md:w-[120px] lg:h-[150px] lg:w-[150px]"
+          className="flex h-[100px] w-[100px] items-center justify-center md:h-[min-content] md:w-[120px] lg:h-[140px] lg:w-[140px]"
         >
           {" "}
-          <Image src={logo} alt="logo" width={150} height={150} />
+          <Image src={logo} alt="logo" width={140} height={140} />
         </Link>
 
         <SectionHeader />

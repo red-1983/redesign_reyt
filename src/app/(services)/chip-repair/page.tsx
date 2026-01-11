@@ -18,10 +18,52 @@ import {
   imageRepairCard4,
 } from "@/data/image-sets";
 import { advantageRepair } from "@/data/advantageRepair";
+import { organizationSchema } from "@/config/schema";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Ремонт трещин и сколов автомобильных стекол в Мозыре",
+  name: "Профессиональный ремонт трещин и сколов автомобильных стекол в Мозыре",
+  description:
+    "Aвтостекло Мозырь, ремонт трещин и сколов автостекла с выездом, быстро, качественно, недорого",
+  url: "https://reyt.by/chip-repair",
+  provider: {
+    "@type": "AutoRepair",
+    name: "РеутБай",
+    url: "https://reyt.by/",
+  },
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Главная",
+      item: "https://reyt.by/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Ремонт трещин и сколов автомобильных стекол",
+      item: "https://reyt.by/chip-repair",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "Ремонт трещин и сколов автомобильных стекол в Мозыре | Reyt.by",
   description:
     "Aвтостекло Мозырь, ремонт трещин и сколов автостекла с выездом, быстро, качественно, недорого  - reyt.by",
+  other: {
+    "application/ld+json": JSON.stringify([
+      organizationSchema,
+      serviceSchema,
+      breadcrumbSchema,
+    ]),
+  },
 };
 const ChipRepair = () => {
   return (

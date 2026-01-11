@@ -4,12 +4,93 @@ import { DivBackground, PortfolioGallery, Breadcrumbs } from "@/components/ui";
 import { IconInstagram } from "@/assets";
 import bgImage from "../../../public/images/nav/bg_navigation.webp";
 import { photos } from "../../data/photos";
+import { organizationSchema } from "@/config/schema";
+
+const portfolioSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  name: "Портфолио наших работ",
+  description:
+    "Примеры выполненных работ по замене и ремонту автостекол, полировке фар и заправке кондиционеров.",
+  url: "https://reyt.by/portfolio",
+  image: [
+    {
+      "@type": "ImageObject",
+      name: "Замена лобового стекла на автомобиле Citroen",
+      contentUrl: "https://reyt.by/images/portfolio/portfolio1_400_500.jpg",
+      description:
+        "Профессиональная замена лобового стекла на автомобиле Citroen с использованием качественных материалов",
+    },
+    {
+      "@type": "ImageObject",
+      name: "Замена стекла задней двери на автомобиле Volkswagen Transporter",
+      contentUrl: "https://reyt.by/images/portfolio/portfolio2_300_400.png",
+      description:
+        "Профессиональная замена стекла задней двери на автомобиле Volkswagen Transporter с использованием качественных материалов",
+    },
+    {
+      "@type": "ImageObject",
+      name: "Замена лобового стекла на автобусе МАЗ",
+      contentUrl: "https://reyt.by/images/portfolio/portfolio4_300_400.png",
+      description:
+        "Профессиональная замена лобового стекла на автобусе МАЗ с использованием качественных материалов",
+    },
+    {
+      "@type": "ImageObject",
+      name: "Замена лобового стекла на грузовике Mercedes-Benz",
+      contentUrl: "https://reyt.by/images/portfolio/portfolio5_450_600.png",
+      description:
+        "Профессиональная замена лобового стекла на грузовике Mercedes-Benz с использованием качественных материалов",
+    },
+    {
+      "@type": "ImageObject",
+      name: "Замена лобового стекла на автомобиле Audi",
+      contentUrl: "https://reyt.by/images/portfolio/portfolio9_500_650.png",
+      description:
+        "Профессиональная замена лобового стекла на автомобиле Audi с использованием качественных материалов",
+    },
+    {
+      "@type": "ImageObject",
+      name: "Заправка кондиционера на автомобиле ",
+      contentUrl: "https://reyt.by/images/portfolio/portfolio11_450_500.png",
+      description:
+        "Профессиональная заправка кондиционера на автомобиле с использованием качественных материалов",
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Главная",
+      item: "https://reyt.by/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Портфолио",
+      item: "https://reyt.by/portfolio",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
-  title: "Фотогалерея | Reyt.by",
+  title: "Портфолио | Reyt.by",
   description:
-    "Автостекла в Мозыре, фотографии наших работ, качество наших работ. - reyt.by",
+    "Примеры наших работ по ремонту и обслуживанию автомобилей, качество наших работ в Мозыре - reyt.by",
+  other: {
+    "application/ld+json": JSON.stringify([
+      organizationSchema,
+      portfolioSchema,
+      breadcrumbSchema,
+    ]),
+  },
 };
+
 export default function Page() {
   return (
     <>

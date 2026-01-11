@@ -13,16 +13,16 @@ const RobotoSans = Roboto({
   variable: "--font-roboto-sans",
   subsets: ["latin"],
 });
-
+import { organizationSchema } from "@/config/schema";
 const RobotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Автомастерская в Мозыре | Reyt.by",
-  description:
-    "Автостекла в Мозыре, замена стекла, ремонт сколов и трещин. Заправка автокондиционера. Полировка фар. - reyt.by",
+  other: {
+    "application/ld+json": JSON.stringify(organizationSchema),
+  },
 };
 
 export default function RootLayout({
