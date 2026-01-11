@@ -1,6 +1,7 @@
 import Image from "next/image";
 import imageSectionAbout from "@/assets/img/imageSectionAbout.webp";
 import imageSectionCooperation from "@/assets/img/imageSectionCooperation.webp";
+import { Suspense } from "react";
 import {
   responsiveSectionMainImages,
   imageHomeCardReplacement,
@@ -23,6 +24,8 @@ import {
   Breadcrumbs,
   Card,
   MotionString,
+  VideoPlayer,
+  Video,
 } from "@/components/ui";
 import type { Metadata } from "next";
 import { organizationSchema } from "@/config/schema";
@@ -81,8 +84,8 @@ export default function Home() {
 
           <div className="flex h-[min-content] flex-col items-center justify-between">
             <h2 className="self-start">О компании</h2>
-            <div className="flex h-[min-content] w-full items-center justify-between gap-[1%]">
-              <p className="w-full text-justify text-[clamp(1rem,2.5vw,1.5rem)] sm:w-[50%]">
+            <div className="flex h-[min-content] w-full flex-col flex-wrap items-center justify-center gap-10 xl:flex-row xl:justify-between xl:gap-5">
+              <p className="w-full max-w-[100%] text-justify text-[clamp(1rem,2.5vw,1.5rem)] xl:w-[50%]">
                 Наша команда - эксперты с многолетним опытом, для которых
                 безупречная видимость и комфорт в вашем автомобиле - главный
                 приоритет. Мы не просто меняем стекла и заправляем кондиционеры.
@@ -93,14 +96,21 @@ export default function Home() {
                 дороге - наша награда!
               </p>
 
-              <div className="relative hidden aspect-[630/420] w-[47%] max-w-[630px] sm:block">
-                <Image
+              <div className="xmd:w-[400px] flex aspect-[2560/1440] w-[300px] items-center self-center lg:w-[600px]">
+                {/* <Image
                   src={imageSectionAbout}
                   alt="Фоновое изображение "
                   fill
                   sizes="100vw"
                   style={{ objectFit: "cover" }}
                   placeholder="blur"
+                /> */}
+                <VideoPlayer
+                  src="/video/bmw.mp4"
+                  autoplay={true}
+                  loop={true}
+                  title="Познавательный видеоролик о дефектах автомобильного стекла"
+                  className="max-w-[100%] md:max-w-[100%]"
                 />
               </div>
             </div>

@@ -3,7 +3,12 @@ import React, { useRef, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 interface VideoPlayerProps {
-  src: string;
+  src:
+    | string
+    | {
+        src: string;
+      };
+  preload?: "none" | "auto" | "metadata";
   srcWebM?: string;
   poster?: string;
   title: string;
@@ -19,6 +24,7 @@ export const VideoPlayer = ({
   srcWebM,
   poster,
   title,
+  preload = "none",
   autoplay = false,
   muted = true,
   controls = true,
@@ -27,6 +33,8 @@ export const VideoPlayer = ({
   lazy = true,
 }: VideoPlayerProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const videoSrc = typeof src === "string" ? src : src.src;
+
   const [isVisible, setIsVisible] = useState(!lazy);
   useEffect(() => {
     if (!lazy || !containerRef.current) return;
@@ -54,15 +62,15 @@ export const VideoPlayer = ({
           autoPlay={autoplay}
           muted={muted}
           loop={loop}
+          preload={preload}
           poster={poster}
           className="h-full w-full object-cover"
           title={title}
-          preload="metadata"
         >
           {/* WebM - лучшее сжатие */}
           {srcWebM && <source src={srcWebM} type="video/webm" />}
-          {/* MP4 - совместимость со всеми браузерами */}
-          <source src={src} type="video/mp4" />
+          {/* MP4 - совместимость со всеми браузерами. Используем videoSrc */}
+          <source src={videoSrc} type="video/mp4" />
           Ваш браузер не поддерживает видео HTML5.
         </video>
       ) : (

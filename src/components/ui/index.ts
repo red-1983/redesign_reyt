@@ -25,3 +25,4 @@ export { Card } from "./card/Card";
 export { MovingStrip } from "./movingStrip/MovingStrip";
 export { MotionString } from "./motionString/MotionString";
 export { VideoPlayer } from "./videoplayer/VideoPlayer";
+export { Video } from "./videoplayer/VideoComponent";

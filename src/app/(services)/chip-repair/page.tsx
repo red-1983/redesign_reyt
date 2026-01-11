@@ -152,7 +152,7 @@ const ChipRepair = () => {
         </ul>
       </section>
 
-      <section className="bg-brand-body mx-auto mt-15 flex w-full max-w-[1350px] flex-col items-center pt-0.5 md:mb-30">
+      <section className="bg-brand-body mx-auto mt-15 mb-15 flex w-full max-w-[1350px] flex-col items-center px-4 pt-0.5 md:mb-30 xl:px-0">
         <h3 className="self-start">
           Предлагаем ознакомится с дефектами и их последствиями для
           автомобильных стекол. Данное видео созданно от аттестованных

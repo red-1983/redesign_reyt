@@ -64,4 +64,34 @@ export const photos = [
     width: 350,
     height: 450,
   },
+  {
+    src: "/images/portfolio/portfolio14_500_600.png",
+    width: 500,
+    height: 600,
+  },
+  {
+    src: "/images/portfolio/portfolio15_400_500.png",
+    width: 400,
+    height: 500,
+  },
+  {
+    src: "/images/portfolio/portfolio16_500_600.png",
+    width: 500,
+    height: 600,
+  },
+  {
+    src: "/images/portfolio/portfolio17_450_600.png",
+    width: 450,
+    height: 600,
+  },
+  {
+    src: "/images/portfolio/portfolio18_500_600.png",
+    width: 500,
+    height: 600,
+  },
+  {
+    src: "/images/portfolio/portfolio19_350_450.png",
+    width: 350,
+    height: 450,
+  },
 ];
