@@ -14,7 +14,7 @@ export const CaruselReviews = () => {
   const reviews = [
     {
       id: 1,
-      fillStar: 3,
+      fillStar: 5,
       avatarImage: "",
       title: "Дмитрий Саабов",
       review:
@@ -32,22 +32,29 @@ export const CaruselReviews = () => {
       id: 3,
       fillStar: 5,
       avatarImage: "",
-      title: "Юрий Бенза",
-      review: "Быстро, качественно. Ребятам спасибо",
+      title: "Николай ",
+      review: "Были проблемы с кондиционером. Ребята помогли. Спасибо",
     },
     {
       id: 4,
       fillStar: 4,
       avatarImage: "",
       title: "Дима П.",
-      review: "Отличный сервис",
+      review: "Хороший сервис",
     },
     {
       id: 5,
-      fillStar: 4,
+      fillStar: 5,
       avatarImage: "",
       title: "Олег Васильев",
       review: "Заказали стекло, пришло быстро. Заменили качественно",
+    },
+    {
+      id: 6,
+      fillStar: 5,
+      avatarImage: "",
+      title: "Юрий Бенза",
+      review: "Быстро, качественно. Ребятам спасибо",
     },
   ];
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -66,7 +73,7 @@ export const CaruselReviews = () => {
             className={isMobile ? "basis-1/2" : "md:basis-1/2 lg:basis-1/3"}
           >
             <CardReview
-              avatarImage={item.avatarImage}
+              // avatarImage={item.avatarImage}
               title={item.title}
               review={item.review}
               fillStar={item.fillStar}

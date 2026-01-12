@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
 interface CardReviewProps {
@@ -11,7 +11,7 @@ interface CardReviewProps {
 }
 export const CardReview = ({
   className,
-  avatarImage,
+  // avatarImage,
   title,
   fillStar,
   review,
@@ -27,10 +27,10 @@ export const CardReview = ({
     >
       <div className="flex items-center justify-between">
         <div className="flex gap-4 self-start">
-          <Avatar>
+          {/* <Avatar>
             <AvatarImage src={avatarImage} alt="avatar" />
             <AvatarFallback className="bg-[#D9D9D9]">CN</AvatarFallback>
-          </Avatar>
+          </Avatar> */}
           <h3>{title}</h3>
         </div>
         <ul className="flex gap-1">
