@@ -6,7 +6,7 @@ export type NavItem = {
 const servicesComponents: NavItem[] = [
   {
     title: "Замена стекла",
-    href: "glass-replacement",
+    href: "/glass-replacement",
     description: "Профессиональная замена лобовых, боковых и задних стекол.",
   },
   {

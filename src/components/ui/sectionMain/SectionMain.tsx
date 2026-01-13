@@ -68,7 +68,7 @@ export const SectionMain = ({
 
       <div
         data-slot="section-text"
-        className="z-10 flex h-full w-full max-w-[1350px] flex-col justify-center gap-5 px-4 sm:justify-between sm:pt-10 lg:pt-0 xl:justify-around"
+        className="z-10 flex h-[min-content] w-full max-w-[1350px] flex-col justify-center gap-5 px-4 pt-10 md:gap-10 lg:pt-0 xl:justify-around xl:gap-15"
       >
         <div>
           <p

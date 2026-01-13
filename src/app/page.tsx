@@ -110,7 +110,7 @@ export default function Home() {
                   autoplay={true}
                   loop={true}
                   title="Познавательный видеоролик о дефектах автомобильного стекла"
-                  className="f-full max-h-[100%] max-w-[100%]"
+                  className="max-w-[100%] md:max-w-[100%]"
                 />
               </div>
             </div>
