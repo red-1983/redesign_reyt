@@ -27,6 +27,10 @@ export const metadata: Metadata = {
     google: "lgLyaWlNCCRW1NUeMX0ZrfMdK-eo3FmiJIZxTWNn8Hg",
     yandex: "f11895c13f258138",
   },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
   other: {
     "application/ld+json": JSON.stringify(organizationSchema),
   },
