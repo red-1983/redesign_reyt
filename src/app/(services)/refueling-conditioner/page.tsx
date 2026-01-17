@@ -45,7 +45,6 @@ const serviceSchema = {
   },
 };
 
-// 2. Схема для "хлебных крошек"
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -190,7 +189,7 @@ const RefulingConditioner = () => {
           </IconCard>
         </ul>
       </section>
-      <div className="bg-brand-body mx-auto w-full max-w-[1350px]">
+      <div className="bg-brand-body mx-auto w-full max-w-[1350px] px-4 xl:px-0">
         <section className="mb-15 flex flex-col pt-0.5">
           <h2 className="self-start">Как часто нужно заправлять кондиционер</h2>
           <p className="text-fontSize-18-24 text-justify">

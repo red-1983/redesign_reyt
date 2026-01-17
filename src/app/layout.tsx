@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import Header from "@/components/layout/Header";
@@ -8,6 +9,8 @@ import { cn } from "@/lib/utils";
 import { ButtonUp } from "@/components/ui";
 import { Toaster } from "@/components/ui/sonner";
 import { CookieConsent } from "@/components/ui/cookieConsent/CookieConsent";
+import { YandexMetrika } from "@/components/ui/analytics/YandexMetrika";
+
 import { CookieProvider } from "@/context/CookieContext";
 const RobotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -20,6 +23,10 @@ const RobotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "lgLyaWlNCCRW1NUeMX0ZrfMdK-eo3FmiJIZxTWNn8Hg",
+    yandex: "f11895c13f258138",
+  },
   other: {
     "application/ld+json": JSON.stringify(organizationSchema),
   },
@@ -36,6 +43,10 @@ export default function RootLayout({
         className={`${RobotoSans.variable} ${RobotoMono.variable} antialiased`}
       >
         <CookieProvider>
+          <Suspense>
+            {" "}
+            <YandexMetrika />
+          </Suspense>
           <div className="mx-auto grid min-h-screen max-w-[1920px] grid-rows-[min-content_1fr_min-content]">
             <Header className="bg-brand-body mx-auto w-full text-white" />
             <main className="text-brandText bg-brand-body relative">
@@ -46,7 +57,6 @@ export default function RootLayout({
             <ButtonUp />
             <CookieConsent />
           </div>
-
           <Toaster position="top-center" />
         </CookieProvider>
       </body>
