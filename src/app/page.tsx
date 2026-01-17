@@ -124,34 +124,28 @@ export default function Home() {
               imageALT="Изображение-замена автомобильных стекол"
               h3="Замена автомобильных стекол"
             >
-              <LinkService href="/services/glass-replacement">
-                Подробнее
-              </LinkService>
+              <LinkService href="/glass-replacement">Подробнее</LinkService>
             </Card>
             <Card
               imageSRC={imageHomeCardPolishing}
               imageALT="Изображение-полировка фар"
               h3="Полировка фар"
             >
-              <LinkService href="/services/headlight-polishing">
-                Подробнее
-              </LinkService>
+              <LinkService href="/headlight-polishing">Подробнее</LinkService>
             </Card>
             <Card
               imageSRC={imageHomeCardChipped}
               imageALT="Изображение-ремонт сколов и трещин"
               h3="Ремонт сколов и трещин"
             >
-              <LinkService href="/services/chip-repair">Подробнее</LinkService>
+              <LinkService href="/chip-repair">Подробнее</LinkService>
             </Card>
             <Card
               imageSRC={imageHomeCardConditioner}
               imageALT="Изображение-заправка кондиционера автомобиля"
               h3="Заправка кондиционера автомобиля"
             >
-              <LinkService href="/services/refueling-conditioner">
-                Подробнее
-              </LinkService>
+              <LinkService href="/refueling-conditioner">Подробнее</LinkService>
             </Card>
           </ul>
         </section>

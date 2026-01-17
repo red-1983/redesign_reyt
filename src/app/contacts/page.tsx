@@ -103,11 +103,11 @@ function Contacts() {
             <h3 className="xmd:text-left text-center">Email:</h3>
 
             <a
-              href="mailto:info@reyt.by"
+              href="mailto:reyt.by@mail.ru"
               className="hover:text-brand-components flex items-center gap-2 text-[16px] transition-colors md:text-[18px]"
             >
               <Mail className="text-brand-components" />
-              info@reyt.by
+              reyt.by@mail.ru
             </a>
           </div>
           <div className="flex flex-col gap-3">

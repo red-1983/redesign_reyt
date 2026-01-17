@@ -34,9 +34,12 @@ export const BlockContact = ({ className, ...props }: BlockContactProps) => {
         </Link>
       </li>
       <li className="hover:text-brand-components transition-all duration-500">
-        <Link href="mailto: privvate@bk.ru" className="flex items-center gap-2">
+        <Link
+          href="mailto: reyt.by@mail.ru"
+          className="flex items-center gap-2"
+        >
           <Mail className="stroke-brand-components size-6" />
-          privvate@bk.ru
+          reyt.by@mail.ru
         </Link>
       </li>
       <li className="hover:text-brand-components transition-all duration-500">
