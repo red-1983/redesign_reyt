@@ -37,7 +37,7 @@ const serviceSchema = {
   name: "Профессиональная заправка и обслуживание автокондиционеров в Мозыре",
   description:
     "Профессиональная заправка и обслуживание автокондиционеров в Мозыре, быстро, качественно, недорого.",
-  url: "https://reyt.by/services/refueling-conditioner", // URL для самой услуги
+  url: "https://reyt.by/refueling-conditioner", // URL для самой услуги
   provider: {
     "@type": "AutoRepair",
     name: "РеутБай",
@@ -59,7 +59,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Заправка и обслуживание автокондиционеров",
-      item: "https://reyt.by/services/refueling-conditioner",
+      item: "https://reyt.by/refueling-conditioner",
     },
   ],
 };

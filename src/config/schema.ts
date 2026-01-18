@@ -3,7 +3,12 @@ export const organizationSchema = {
   "@type": "AutoRepair",
   name: "РеутБай",
   url: "https://reyt.by/",
-  logo: "https://reyt.by/assets/icon/logo.svg",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://reyt.by/logo.svg",
+    width: 100,
+    height: 100,
+  },
   telephone: [
     "+375 (29) 235-85-97",
     "+375 (033) 650-86-32",

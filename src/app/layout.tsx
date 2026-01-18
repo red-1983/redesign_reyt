@@ -5,7 +5,6 @@ import Header from "@/components/layout/Header";
 import "./globals.css";
 import { MainNavigation } from "@/components/layout/MainNavigation";
 import { Footer } from "@/components";
-import { cn } from "@/lib/utils";
 import { ButtonUp } from "@/components/ui";
 import { Toaster } from "@/components/ui/sonner";
 import { CookieConsent } from "@/components/ui/cookieConsent/CookieConsent";

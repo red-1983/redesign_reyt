@@ -1,7 +1,5 @@
 import Image from "next/image";
-import imageSectionAbout from "@/assets/img/imageSectionAbout.webp";
 import imageSectionCooperation from "@/assets/img/imageSectionCooperation.webp";
-import { Suspense } from "react";
 import {
   responsiveSectionMainImages,
   imageHomeCardReplacement,
@@ -25,7 +23,6 @@ import {
   Card,
   MotionString,
   VideoPlayer,
-  Video,
 } from "@/components/ui";
 import type { Metadata } from "next";
 import { organizationSchema } from "@/config/schema";
