@@ -8,7 +8,7 @@ export default function NotFound() {
       <DivBackground
         imageSRC={bgImage}
         imageALT="bgImage"
-        className="hidden h-17 md:block"
+        className="hidden h-17 md:block" 
       />
       <section className="mx-auto flex h-full max-w-[1350px] flex-col items-center justify-center gap-8 px-4 py-20 text-center">
         <div className="mb-10 flex flex-col gap-4">

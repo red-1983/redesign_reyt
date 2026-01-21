@@ -16,6 +16,7 @@ export const MobileMainNavigation = ({
   ...props
 }: MobileMainNavigationProps) => {
   const [open, setOpen] = useState(false);
+
   return (
     <div className={className} {...props}>
       <Sheet open={open} onOpenChange={setOpen}>

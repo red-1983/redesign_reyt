@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     const validationResult = consultationFormSchema.safeParse(body);
 
     if (!validationResult.success) {
-      // Применяем ваше исправление
+     
       const flattenedErrors = z.flattenError(validationResult.error);
       return NextResponse.json(
         {

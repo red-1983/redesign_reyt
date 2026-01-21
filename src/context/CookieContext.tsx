@@ -25,9 +25,9 @@ const CookieContext = createContext<CookieContextType | undefined>(undefined);
 
 export function CookieProvider({ children }: { children: ReactNode }) {
   const [isInitialized, setIsInitialized] = useState(false);
-  const [consentGiven, setConsentGiven] = useState(true); // Изначально true, чтобы избежать моргания
+  const [consentGiven, setConsentGiven] = useState(true); 
   const [settings, setSettings] = useState<CookieSettings>({
-    statistical: true, // Значения по умолчанию
+    statistical: true, 
     functional: true,
   });
   useEffect(() => {
