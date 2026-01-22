@@ -3,7 +3,7 @@ import {
   Breadcrumbs,
   SectionMain,
   Popap,
-  FormContact,
+  DynamicFormContact,
   Card,
   IconCard,
   MotionString,
@@ -90,14 +90,14 @@ const RefulingConditioner = () => {
         text="Не ждите, пока жара застанет Вас врасплох! Обеспечьте комфорт и безопасность в своих поездках. Запишитесь на диагностику и заправку кондиционера прямо сейчас!"
       >
         <Popap className="hidden sm:flex">
-          <FormContact />
+          <DynamicFormContact />
         </Popap>
       </SectionMain>
       <Breadcrumbs className="mx-auto flex w-full max-w-[1350px] [&_[data-slot=breadcrumb-list]]:text-[#bebebe]" />
       <div className="mx-auto max-w-[1350px] px-4">
         <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0">
           <Popap className="flex sm:hidden">
-            <FormContact />
+            <DynamicFormContact />
           </Popap>
           <h2 className="self-start">Система кондиционирования автомобиля</h2>
           <p className="text-fontSize-18-24 text-justify">

@@ -14,10 +14,10 @@ import {
   LinkService,
   IconCard,
   CarouselImage,
-  FormaForConsultation,
-  FormContact,
   CaruselReviews,
   SectionMain,
+  DynamicFormContact,
+  DynamicFormaForConsultation,
   Popap,
   Breadcrumbs,
   Card,
@@ -69,14 +69,14 @@ export default function Home() {
             Вернем прозрачность, яркость и прохладу!"
       >
         <Popap className="hidden sm:flex">
-          <FormContact />
+          <DynamicFormContact />
         </Popap>
       </SectionMain>
       <Breadcrumbs className="mx-auto flex w-full max-w-[1350px] md:hidden [&_[data-slot=breadcrumb-list]]:text-[#bebebe]" />
       <div className="mx-auto max-w-[1350px] px-4">
         <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0 md:mb-30">
           <Popap className="flex sm:hidden">
-            <FormContact />
+            <DynamicFormContact />
           </Popap>
 
           <div className="flex h-[min-content] flex-col items-center justify-between">
@@ -94,18 +94,11 @@ export default function Home() {
               </p>
 
               <div className="xmd:w-[400px] flex aspect-[2560/1440] w-[300px] items-center self-center lg:w-[600px]">
-                {/* <Image
-                  src={imageSectionAbout}
-                  alt="Фоновое изображение "
-                  fill
-                  sizes="100vw"
-                  style={{ objectFit: "cover" }}
-                  placeholder="blur"
-                /> */}
                 <VideoPlayer
                   src="/video/bmw.mp4"
                   autoplay={true}
                   loop={true}
+                  preload="none"
                   title="Познавательный видеоролик о дефектах автомобильного стекла"
                   className="w-full max-w-[100%] md:max-w-[100%]"
                 />
@@ -206,7 +199,7 @@ export default function Home() {
                 предложит оптимальное решение для вашего автомобиля
               </span>
             </p>
-            <FormaForConsultation />
+            <DynamicFormaForConsultation />
           </div>
         </div>
       </section>

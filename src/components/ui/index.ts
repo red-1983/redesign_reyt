@@ -14,6 +14,9 @@ export { LinkService } from "./linkService/LinkService";
 export { PortfolioGallery } from "./portfolioGallery/PortfolioGallery";
 export { DivBackground } from "./divBackground/DivBackground";
 export { FormContact } from "./formContact/FormContact";
+export { DynamicFormContact } from "./formContact/DynamicFormContact";
+
+export { DynamicFormaForConsultation } from "./formaForConsultation/DynamicFormaForConsultation";
 export { CopyButton } from "./copyButton/CopyButton";
 export { BlockTelephone } from "./blockTelephone/BlockTelephone";
 export { Popap } from "./popap/Popap";

@@ -24,7 +24,7 @@ const RobotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   verification: {
     google: "lgLyaWlNCCRW1NUeMX0ZrfMdK-eo3FmiJIZxTWNn8Hg",
-    yandex: "ca7223d31b2ba0a1",
+    yandex: "0971de291715d099",
   },
   icons: {
     icon: "/icon.svg",

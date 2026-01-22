@@ -3,7 +3,7 @@ import {
   Breadcrumbs,
   SectionMain,
   Popap,
-  FormContact,
+  DynamicFormContact,
   Card,
   IconCard,
   CarouselImage,
@@ -96,14 +96,14 @@ const HeadlightPolishing = () => {
              "
       >
         <Popap className="hidden sm:flex">
-          <FormContact />
+          <DynamicFormContact />
         </Popap>
       </SectionMain>
       <Breadcrumbs className="mx-auto flex w-full max-w-[1350px] [&_[data-slot=breadcrumb-list]]:text-[#bebebe]" />
       <div className="mx-auto max-w-[1350px] px-4">
         <section className="flex h-[min-content] w-full flex-col items-center justify-center pt-10 sm:pt-0">
           <Popap className="flex sm:hidden">
-            <FormContact />
+            <DynamicFormContact />
           </Popap>
           <h2 className="self-start">Предлагаем</h2>
           <ul className="flex flex-wrap justify-center gap-5 sm:justify-around">

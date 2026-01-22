@@ -46,10 +46,9 @@ export const SectionMain = ({
             alt={imageALT}
             fill
             sizes="100vw"
-            quality={100}
+            priority
             style={{ objectFit: "cover" }}
             placeholder="blur"
-            loading="lazy"
           />
         </picture>
       ) : (
@@ -58,11 +57,10 @@ export const SectionMain = ({
           alt={imageALT}
           fill
           sizes="100vw"
-          quality={100}
           style={{ objectFit: "cover" }}
           placeholder="blur"
           className="z-0"
-          loading="lazy"
+          priority
         />
       )}
 
