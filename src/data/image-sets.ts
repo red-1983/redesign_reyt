@@ -153,11 +153,7 @@ export const polishingSectionMainImages = {
   tablet: polishingSectionMainTablet,
   mobile: polishingSectionMainMobile,
 };
-// export const imagePolishingCard1 = {
-//   desktop: polishingCard1Desktop,
-//   tablet: polishingCard1Tablet,
-//   mobile: polishingCard1Mobile,
-// };
+
 export const imagePolishingCard2 = {
   desktop: polishingCard2Desktop,
   tablet: polishingCard2Tablet,
